@@ -1,6 +1,6 @@
-function your_func(){
+/*function your_func(){
     window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ?autoplay=1";
-}
+}*/
 document.addEventListener("DOMContentLoaded", event =>{
     //setTimeout(function() { your_func(); }, 2500);
 
