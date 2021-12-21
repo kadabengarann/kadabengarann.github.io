@@ -7,13 +7,11 @@ const scroll = new LocomotiveScroll({
   smooth: true,
   direction: 'horizontal',
   smartphone: {
+    direction: 'vertical',
     smooth: true,
   },
   tablet: {
-    direction: 'horizontal',
+    direction: 'vertical',
     smooth: true,
   },
 });
-
-scroll.direction = 'vertical';
-console.log(scroll.direction);
