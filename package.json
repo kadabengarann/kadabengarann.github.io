@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "parcel src/index.html",
     "prod": "parcel build src/index.html --public-url ./",
-    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
+    "push-gh-pages": "echo 'lalala' >> dist/CNAME;push-dir --dir=dist --branch=gh-pages --cleanup --verbose;"
   },
   "author": "",
   "license": "ISC",
