@@ -8,10 +8,10 @@ const scroll = new LocomotiveScroll({
   direction: 'horizontal',
   smartphone: {
     direction: 'vertical',
-    smooth: true,
+    smooth: false,
   },
   tablet: {
     direction: 'vertical',
-    smooth: true,
+    smooth: false,
   },
 });
