@@ -31,8 +31,8 @@
         </nav>
     </header>
     <main data-scroll-container>
-        <section class="section1" data-scroll-section>
-            <div class="home_enterance">
+        <section class="section1" data-scroll-section id="data-sec">
+            <div class=" home_enterance">
                 <h1 class="home_title" data-scroll data-scroll-speed="1">
                     <span>Ardhy</span> Satrio
                 </h1>
@@ -41,7 +41,7 @@
                 </div>
             </div>
             <div class="content_section" data-scroll data-scroll-speed="1">
-                <div class="about_section">
+                <div class=" about_section">
                     <div class="text_zone" data-scroll-repeat="false" data-scroll data-scroll-offset="300">
                         <header>
                             <h1>My friends <br />call me Ardi.</h1>
@@ -59,7 +59,7 @@
                             </p>
                         </div>
                         <a class="c-cta_button o-button-norm" href="#"> Get my Resume </a>
-                        <a class="c-cta_button o-button" href="#">
+                        <a class="c-cta_button o-button" href="#contact" data-scroll-to>
                             Let's make something special
                             <span class="o-button_arrow u-icon"> → </span>
                         </a>
@@ -89,7 +89,8 @@
                     </h1>
                     <section class="block_details">
                         <div class="block_details_inner">
-                            <div class="block_details_text" data-scroll data-scroll-offset="200">
+                            <div class="block_details_text" data-scroll-repeat="false" data-scroll
+                                data-scroll-offset="200">
                                 <h1 class="block_details_title">Velvet</h1>
                                 <p>I am a chic new collection designed exclusively for Toronto by the creative minds at
                                     Maison Corbeil. I turn heads with
@@ -183,9 +184,36 @@
                             </div>
                         </div>
                     </section>
-                    <img style="margin: auto;" src="./img/img.jpg" alt="">
                 </div>
             </div>
+            <a class="anchor" id="contact"></a>
+            <div class="footer" data-scroll data-scroll-sticky data-scroll-target="#data-sec">
+                <div class="wrapper">
+                    <div class="footer_top">
+                        <p class="footer_talk">Let’s talk about your next project!</p>
+                        <a href="mailto:ardhysatrio@outlook.com?subject=Hi" target="_blank" class="footer_mail o-link">
+                            ardhysatrio@outlook.com
+                        </a>
+
+                    </div>
+                    <div class="footer_social">
+                        <div class="footer__social-text js-social-text">Look at my social profiles ☞</div>
+                        <div class="footer__social-link-box">
+                            <a href="https://www.instagram.com/ardhy.satrio" target="_blank"
+                                class="footer__social-link o-link">
+                                Instagram
+                            </a>
+                            <span class="footer__social-link footer__social-link--nohover">·</span>
+                            <a href="https://www.linkedin.com/in/ardhysatrio/" target="_blank"
+                                class="footer__social-link o-link">
+                                LinkedIn
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </section>
     </main>
 

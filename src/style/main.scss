@@ -1,3 +1,5 @@
+$width-home: 84.6vw;
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -10,6 +12,7 @@ body {
     color: #1a1a1a;
     display: flex;
     width: max-content;
+    background-color: black;
 }
 
 a {
@@ -17,10 +20,22 @@ a {
     text-decoration: none;
 }
 
+a.anchor {
+    display: block;
+    position: relative;
+    // top: -60px;
+    visibility: hidden;
+}
+
 header {
     z-index: 999;
     position: fixed;
     width: fit-content;
+}
+
+.wrapper {
+    padding-right: 5rem;
+    padding-left: 5rem;
 }
 
 // -------------- Nav Section ------------------------
@@ -104,6 +119,8 @@ section {
 .content_section {
     display: flex !important;
     width: fit-content;
+    background-color: #fff;
+    margin-right: calc($width-home + 70px);
 }
 
 hr.divider {
@@ -119,7 +136,7 @@ hr.divider {
 
 .home_keyvisual {
     // width: calc(90vw - 60px);
-    width: 83.8vw;
+    width: $width-home;
     height: 100vh;
 }
 
@@ -336,8 +353,9 @@ button:hover {
     background-color: #fff;
     height: 100%;
     min-width: 100vw;
-    margin-left: 150px;
+    padding-left: 150px;
     display: flex;
+    padding-right: 50px;
 }
 
 .section-title {
@@ -551,4 +569,76 @@ button:hover {
 .back:hover {
     background-size: 110% !important;
 
+}
+
+.footer_section {
+    // width: 100vw;
+    // height: 100vh;
+}
+
+.footer {
+    position: absolute;
+    top: 0;
+    // right: calc(2 * $width-home);
+    left: calc((100vw - $width-home) / 4);
+    z-index: -3;
+    width: calc((100vw - 60px));
+    height: 100vh;
+    // background: none;
+    background-color: #212121;
+    color: #fff;
+}
+
+.footer_top {
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+}
+
+.footer_talk {
+    color: #fcec62;
+
+    font-size: 5rem;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.footer_mail {
+    display: inline-block;
+    position: relative;
+    margin-top: 6.25rem;
+    color: #fff;
+    font-size: 4rem;
+    line-height: 1.37;
+}
+
+.footer_social {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 3.5rem;
+    padding-bottom: 3.75rem;
+    border-top: 1px solid hsla(0, 0%, 100%, .2);
+}
+
+.footer__social-text {
+    color: #8e8e8e;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 2;
+    transition: color .3s;
+}
+
+.footer__social-link-box {
+    text-align: right;
+}
+
+.footer__social-link {
+    position: relative;
+    margin-right: 1.25rem;
+    color: #8e8e8e;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 2;
+    transition: color .3s;
 }
