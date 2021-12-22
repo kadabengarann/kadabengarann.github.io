@@ -124,6 +124,7 @@ section {
     width: fit-content;
     background-color: #fff;
     margin-right: calc($width-home + 70px);
+    height: 100vh;
 }
 
 hr.divider {
@@ -648,4 +649,48 @@ button:hover {
     font-weight: 300;
     line-height: 2;
     transition: color .3s;
+}
+
+// ----------- Responsive --------------------
+
+@media screen and (max-width: 1024px) {
+    body {
+        width: auto;
+    }
+
+    section {
+        height: auto;
+        width: 100vw;
+        flex-direction: column;
+    }
+
+    .home_enterance {
+        height: 100vh;
+        background-color: red;
+        width: 100vw;
+    }
+
+    .home_keyvisual {
+        width: 100vw;
+        height: 105vh;
+
+    }
+
+    .home_keyvisual img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .home_title {
+        top: 50vh;
+    }
+
+    .content_section {
+        width: 100vw;
+        height: fit-content;
+        flex-direction: column;
+        position: relative;
+        // top: -5vh;
+        // top: -76px;
+    }
 }
