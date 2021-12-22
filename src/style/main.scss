@@ -34,8 +34,11 @@ header {
 }
 
 .wrapper {
+    height: 100%;
     padding-right: 5rem;
     padding-left: 5rem;
+    display: flex;
+    flex-direction: column;
 }
 
 // -------------- Nav Section ------------------------
@@ -587,6 +590,10 @@ button:hover {
     // background: none;
     background-color: #212121;
     color: #fff;
+}
+
+.footer .wrapper {
+    justify-content: space-between;
 }
 
 .footer_top {
