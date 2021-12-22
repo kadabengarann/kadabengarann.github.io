@@ -8,7 +8,7 @@
     "prod": "parcel build src/index.html --public-url ./",
     "buat-cname":"echo ardhysatrio.me >> dist/CNAME && echo www.ardhysatrio.me >> dist/CNAME",
     "push-branch":"push-dir --dir=dist --branch=gh-pages --cleanup --verbose",
-    "push-gh-pages": "npm run buat-cname && npm run push-branch"
+    "push-gh-pages": "npm run prod && npm run buat-cname && npm run push-branch"
   },
   "author": "",
   "license": "ISC",
