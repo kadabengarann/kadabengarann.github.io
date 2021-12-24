@@ -62,6 +62,8 @@ nav {
     transition-duration: .6s;
     transition-timing-function: cubic-bezier(.4, .1, .2, 1);
     transition-delay: .2s;
+    border-right: 1px solid #ccc;
+
 }
 
 .navbar.open,
@@ -309,6 +311,12 @@ section {
     // width: 200vw;
     display: flex !important;
 
+}
+
+section.small {
+    height: auto;
+    width: 100vw;
+    flex-direction: column;
 }
 
 .content_section {
@@ -851,6 +859,7 @@ button:hover {
     body {
         width: auto;
         overflow-x: hidden;
+        // height: auto;
     }
 
     main {
@@ -870,6 +879,8 @@ button:hover {
     }
 
     .navbar {
+        position: relative;
+        left: -1px;
         width: 0;
     }
 
@@ -890,14 +901,9 @@ button:hover {
         border: 1px solid #ccc;
     }
 
-    section {
-        height: auto;
-        width: 100vw;
-        flex-direction: column;
-    }
-
     .section1 {
         pointer-events: none;
+        // display: block !important;
     }
 
     .section1>* {
@@ -991,6 +997,7 @@ button:hover {
         transform: none;
         padding-top: 15px;
         width: auto;
+        font-size: 5.5em;
     }
 
     .section-title-inner {

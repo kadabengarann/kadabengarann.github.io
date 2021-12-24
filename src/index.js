@@ -8,13 +8,26 @@ const scroll = new LocomotiveScroll({
   direction: 'horizontal',
   smartphone: {
     direction: 'vertical',
-    smooth: false,
+    smooth: true,
   },
   tablet: {
     direction: 'vertical',
-    smooth: false,
+    smooth: true,
   },
 });
+
+const mainContainer = document.querySelector(".section1");
+
+const widthStart  = window.innerWidth || document.documentElement.clientWidth || 
+document.body.clientWidth;
+document.body.clientHeight;
+if (widthStart <= 1024) {
+  console.log('kecil');
+  if (!(mainContainer.classList.contains('small')))
+ {
+          mainContainer.classList.add("small");
+  }
+}
 
 const navBtn = document.querySelector(".navBtn");
 const navCloseBtn = document.querySelector(".navbar_closeBtn");
@@ -50,24 +63,36 @@ window.addEventListener('resize', function(event) {
 document.body.clientWidth;
 const height = window.innerHeight|| document.documentElement.clientHeight|| 
 document.body.clientHeight;
+if (width <= 1024) {
+  if (!(mainContainer.classList.contains('small')))
+ {
+  document.location.reload(true);
+  }
 
-console.log((width*84.6)/100, height);
+} else {
+  if (mainContainer.classList.contains('small'))
+ {
+   document.location.reload(true)
+  }
+
+}
+ console.log(width, height);
 }, true);
 
-    // console.log('ganti');
-document.addEventListener("DOMContentLoaded", function () {
-  const judul = document.querySelector(".section-title");
+//     // console.log('ganti');
+// document.addEventListener("DOMContentLoaded", function () {
+//   const judul = document.querySelector(".section-title");
 
-const navbar = document.querySelector(".navbar");
+// const navbar = document.querySelector(".navbar");
 
-if (!(judul.classList.contains("is-inview"))) {
-}else{
-      navbar.classList.remove("bordered");
-}
+// if (!(judul.classList.contains("is-inview"))) {
+// }else{
+//       navbar.classList.remove("bordered");
+// }
 
-})
+// })
 
-scroll.on('call', () => {
-    const navbar = document.querySelector(".navbar");
-  navbar.classList.toggle("bordered");
-});
+// scroll.on('call', () => {
+//     const navbar = document.querySelector(".navbar");
+//   navbar.classList.toggle("bordered");
+// });
