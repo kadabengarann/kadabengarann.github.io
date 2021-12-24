@@ -933,6 +933,7 @@ button:hover {
         // top: -5vh;
         // top: -76px;
         margin-bottom: calc(100vh);
+        margin-right: 0;
     }
 
     .about_section {
@@ -989,6 +990,7 @@ button:hover {
         position: unset;
         transform: none;
         padding-top: 15px;
+        width: auto;
     }
 
     .section-title-inner {
@@ -1144,5 +1146,35 @@ button:hover {
 
     .footer__social-link {
         font-size: calc(4190vw/1400);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .wrapper {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .home_title {
+        left: calc(50% - ((20px + 9.920px + 323.968px)/2));
+    }
+
+    .about_section {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .intro_text {
+        width: 100%;
+        margin-top: 70px;
+    }
+
+    .projects_section {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .footer_mail {
+        font-size: 1.5rem;
     }
 }
