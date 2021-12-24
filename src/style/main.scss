@@ -10,7 +10,6 @@ body {
     height: 100vh;
     font-family: 'Manrope', sans-serif;
     color: #1a1a1a;
-    display: flex;
     width: max-content;
     background-color: black;
 }
@@ -309,7 +308,7 @@ main {
 section {
     height: 100vh;
     // width: 200vw;
-    display: flex !important;
+    // display: flex !important;
 
 }
 
@@ -320,10 +319,13 @@ section.small {
 }
 
 .content_section {
+    position: relative;
+    left: calc((-63vw - 26.5rem) / 8);
     display: flex !important;
     width: fit-content;
     background-color: #fff;
-    margin-right: calc($width-home + 70px);
+    margin-right: calc(((-63vw - 26.5rem) / 8) + 100vw - 145px);
+    // margin-right: 780px;
     height: 100vh;
 }
 
@@ -340,14 +342,14 @@ hr.divider {
 
 .home_keyvisual {
     // width: calc(90vw - 60px);
-    width: $width-home;
+    width: calc(100vw - 60px);
     height: 100vh;
 }
 
 .home_keyvisual img {
     position: relative;
     left: -3px;
-    width: 120%;
+    width: 110%;
     height: inherit;
     object-fit: cover;
     object-position: center;
@@ -387,7 +389,7 @@ hr.divider {
 }
 
 .section2 {
-    background-color: rgb(160, 206, 54);
+    // background-color: rgb(160, 206, 54);
 }
 
 .text_zone {
@@ -785,7 +787,7 @@ button:hover {
     position: absolute;
     top: 0;
     // right: calc(2 * $width-home);
-    left: calc((100vw - $width-home) / 4);
+    left: 60px;
     z-index: -3;
     width: calc((100vw - 60px));
     height: 100vh;
@@ -805,8 +807,8 @@ button:hover {
 
 .footer_talk {
     color: #fcec62;
-
-    font-size: 5rem;
+    white-space: normal;
+    font-size: 4.7rem;
     font-weight: 500;
     line-height: 1.1;
 }
@@ -911,14 +913,13 @@ button:hover {
     }
 
     .home_enterance {
-        height: 100vh;
-        // background-color: red;
+        height: 102vh;
         width: 100vw;
     }
 
     .home_keyvisual {
         width: 100vw;
-        height: 105vh;
+        height: 110vh;
 
     }
 
@@ -931,14 +932,24 @@ button:hover {
         top: 50vh;
     }
 
+    .section2 {
+        height: auto;
+        width: 100vw;
+    }
+
     .content_section {
         width: 100vw;
         height: fit-content;
         flex-direction: column;
         position: relative;
-        // top: -5vh;
+        // top: 0vh;
         // top: -76px;
+        left: 0;
+        top: calc((57vh - 83.5rem) / 7);
+        bottom: calc(((57vh - 83.5rem) / -7));
         margin-bottom: calc(100vh);
+        // margin-bottom: calc(((57vh - 83.5rem) / 7) + 100vw + 410px);
+
         margin-right: 0;
     }
 
@@ -958,7 +969,7 @@ button:hover {
         left: 100px;
         width: 133%;
         height: 1px;
-        background-color: currentColor;
+        background-color: #ccc;
         transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
         -webkit-transform-origin: center right;
         transform-origin: center right;
@@ -1005,32 +1016,33 @@ button:hover {
         align-items: center;
         position: relative;
         padding-bottom: 40px;
+        left: -102vw;
     }
 
-    .section-title-inner:nth-child(1)::before {
+    .section-title-inner::before {
         content: "";
-        display: none;
+        // display: none;
     }
 
-    .section-title-inner:nth-child(1)::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 1px;
-        width: 8.5rem;
-        // margin: 0 3.75rem;
-        display: inline-block;
-        background-color: #1a1a1a;
-        vertical-align: middle;
-    }
+    // .section-title-inner::after {
+    //     content: "";
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 0;
+    //     height: 1px;
+    //     width: 8.5rem;
+    //     // margin: 0 3.75rem;
+    //     display: inline-block;
+    //     background-color: #1a1a1a;
+    //     vertical-align: middle;
+    // }
 
     .section-title-inner:nth-child(2) {
-        display: none;
+        // display: none;
     }
 
     .section-title-inner:nth-child(3) {
-        display: none;
+        // display: none;
     }
 
     .block_details {
@@ -1051,6 +1063,11 @@ button:hover {
 
     .block_details_photo {
         margin-right: -46px;
+    }
+
+    .hole {
+        height: 85%;
+        margin: auto;
     }
 
     .footer {
@@ -1109,6 +1126,10 @@ button:hover {
 
     .section-title {
         font-size: 4.5em;
+    }
+
+    .section-title-inner {
+        left: -122vw;
     }
 
     .block_details {
@@ -1184,6 +1205,10 @@ button:hover {
     .projects_section {
         padding-left: 30px;
         padding-right: 30px;
+    }
+
+    .section-title-inner {
+        left: -192vw;
     }
 
     .footer_mail {
