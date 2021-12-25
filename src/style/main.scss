@@ -390,10 +390,6 @@ hr.divider {
     width: fit-content;
 }
 
-.section2 {
-    // background-color: rgb(160, 206, 54);
-}
-
 .text_zone {
     width: 500px;
 }
@@ -1062,28 +1058,6 @@ button:hover {
 
     .section-title-inner::before {
         content: "";
-        // display: none;
-    }
-
-    // .section-title-inner::after {
-    //     content: "";
-    //     position: absolute;
-    //     bottom: 0;
-    //     left: 0;
-    //     height: 1px;
-    //     width: 8.5rem;
-    //     // margin: 0 3.75rem;
-    //     display: inline-block;
-    //     background-color: #1a1a1a;
-    //     vertical-align: middle;
-    // }
-
-    .section-title-inner:nth-child(2) {
-        // display: none;
-    }
-
-    .section-title-inner:nth-child(3) {
-        // display: none;
     }
 
     .block_details {
