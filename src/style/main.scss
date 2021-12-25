@@ -320,11 +320,12 @@ section.small {
 
 .content_section {
     position: relative;
-    left: calc((-63vw - 26.5rem) / 8);
+    // left: calc((100vw - -247.5rem) / 8);
     display: flex !important;
     width: fit-content;
     background-color: #fff;
-    margin-right: calc(((-63vw - 26.5rem) / 8) + 100vw - 145px);
+    // margin-right: calc(((-63vw - 26.5rem) / 8) + 100vw - 145px);
+    margin-right: calc(102vw);
     // margin-right: 780px;
     height: 100vh;
 }
@@ -890,6 +891,10 @@ button:hover {
         border-right: 0;
     }
 
+    .navbar_links {
+        padding-bottom: 12vh;
+    }
+
     // .navbar.bordered.open {
     //     border-right: 1px solid #ccc;
     // }
@@ -918,39 +923,40 @@ button:hover {
     }
 
     .home_keyvisual {
-        width: 100vw;
-        height: 110vh;
+        width: 102vw;
+        height: 100vh;
 
     }
 
     .home_keyvisual img {
         width: 100%;
-        height: 100%;
+        height: 102%;
     }
 
     .home_title {
-        top: 50vh;
+        top: 45vh;
     }
 
     .section2 {
-        height: auto;
+        height: fit-content;
         width: 100vw;
+        padding-bottom: 1px;
     }
 
     .content_section {
         width: 100vw;
         height: fit-content;
         flex-direction: column;
-        position: relative;
+        // position: relative;
         // top: 0vh;
         // top: -76px;
-        left: 0;
-        top: calc((57vh - 83.5rem) / 7);
-        bottom: calc(((57vh - 83.5rem) / -7));
+        // left: 0;
+        // top: calc((57vh - 83.5rem) / 7);
+        // bottom: calc(((57vh - 83.5rem) / -7));
         margin-bottom: calc(100vh);
         // margin-bottom: calc(((57vh - 83.5rem) / 7) + 100vw + 410px);
 
-        margin-right: 0;
+        // margin-right: 0;
     }
 
     .about_section {
@@ -1071,10 +1077,12 @@ button:hover {
     }
 
     .footer {
-        position: fixed;
+        position: absolute;
+        z-index: -1;
+        // position: fixed;
         left: 0;
         width: 100vw;
-        z-index: -1;
+        // z-index: -1;
     }
 
     .footer_talk {
