@@ -16,6 +16,19 @@ const scroll = new LocomotiveScroll({
   },
 });
 
+window.addEventListener("load", function () {
+  
+  loaded();
+
+})
+async function loaded() {
+  const loader = document.querySelector(".loader");
+  console.log(loader);
+
+  await new Promise(resolve => setTimeout(resolve, 1000));
+  loader.classList.add("hidden");
+}
+
 const mainContainer = document.querySelector(".section1");
 
 const widthStart  = window.innerWidth || document.documentElement.clientWidth || 

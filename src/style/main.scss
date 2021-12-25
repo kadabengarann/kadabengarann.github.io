@@ -6,6 +6,7 @@ $width-home: 84.6vw;
     margin: 0;
 }
 
+
 body {
     height: 100vh;
     font-family: 'Manrope', sans-serif;
@@ -716,9 +717,12 @@ button:hover {
     width: 100%;
     height: 280px;
     background-image: url('https://homesociete.ca/uploads/2021/12/Campagne-HS%E2%80%94Boxing-Day-2021-_homepage_445x370-1-445x370.jpg');
-    transition: background-size .8s cubic-bezier(.25, .46, .45, .94);
-    background-size: 130%;
+    transition: all .8s cubic-bezier(.25, .46, .45, .94);
+
+    // transition: background-size .8s cubic-bezier(.25, .46, .45, .94);
+    background-size: 150%;
     background-position: center;
+    opacity: 0;
     // background-position-y: 64px;
 }
 
@@ -726,6 +730,7 @@ button:hover {
     transition-delay: .11s;
     // background-image: url('https://homesociete.ca/uploads/2019/06/must-1-1.jpg');
     background-size: 100%;
+    opacity: 100%;
 
 }
 
@@ -855,6 +860,26 @@ button:hover {
     transition: color .3s;
 }
 
+.loader {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 999;
+    opacity: 100%;
+    transition: all .3s cubic-bezier(.25, .46, .45, .94);
+
+}
+
+.loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s cubic-bezier(.25, .46, .45, .94);
+
+}
+
 // ----------- Responsive --------------------
 
 @media screen and (max-width: 1024px) {
@@ -925,12 +950,13 @@ button:hover {
     .home_keyvisual {
         width: 102vw;
         height: 100vh;
-
+        top: -80px;
+        position: relative;
     }
 
     .home_keyvisual img {
         width: 100%;
-        height: 102%;
+        height: 110%;
     }
 
     .home_title {
