@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import Footer from "./Footer";
 import "../style/project.scss";
 
-const projects = require("../projects").default;
+const projects = require("./projects");
 
 const ProjectPage = () => {
   const { projectId } = useParams();

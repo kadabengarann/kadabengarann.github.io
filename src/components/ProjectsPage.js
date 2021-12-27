@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Footer from "./Footer";
 import "../style/projects.scss";
 
-const projects = require('../projects').default;
+const projects = require('./projects');
 
 const ProjectsPage = () => {
 
