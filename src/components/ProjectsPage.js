@@ -46,7 +46,11 @@ const ProjectsPage = () => {
                   <div className="block_details_photo" data-scroll data-scroll-offset="200">
                     <div className="base">
                       <div className="hole">
-                          <a href={`/project/`+(index+1)} 
+                          {/* <a href={`/project/`+(index+1)} 
+                    className="o-link">
+                    View details
+                  </a> */}
+                          <a href={`/project`} 
                     className="o-link">
                     View details
                   </a>
