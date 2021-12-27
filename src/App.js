@@ -3,6 +3,7 @@ import Home from "./components/Home";
 import ProjectsPage from "./components/ProjectsPage";
 import ProjectPage from "./components/ProjectPage";
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./style/main.scss";
