@@ -95,7 +95,7 @@ const Home = () => {
                       data-scroll-offset="200"
                     >
                       <h1 className="block_details_title">
-                        <a href={`/project/` + (index + 1)}>{project.name}</a>
+                        <a href={`/project?id=` + (index + 1)}>{project.name}</a>
                       </h1>
                       <p>{project.desc}</p>
                       <div className="block_details_links" data-scroll>

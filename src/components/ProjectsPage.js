@@ -65,7 +65,7 @@ const ProjectsPage = () => {
                       <div className="base">
                         <div className="hole">
                           <a
-                            href={`/project/` + (index + 1)}
+                            href={`/project?id=` + (index + 1)}
                             className="o-link"
                           >
                             View details
