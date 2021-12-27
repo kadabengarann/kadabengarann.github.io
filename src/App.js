@@ -7,6 +7,7 @@ import ReactDOM from 'react-dom';
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./style/main.scss";
+import NoMatchPage from "./components/NoMatchPage";
 
 function App() {
   return (
@@ -23,8 +24,11 @@ function App() {
           <Route exact path="/projects">
             <ProjectsPage />
           </Route>
-          <Route exact path="/project">
+          <Route exact path="/project/:projectId">
             <ProjectPage/>
+          </Route>
+          <Route>
+            <NoMatchPage/>
           </Route>
         </Switch>
       </main>

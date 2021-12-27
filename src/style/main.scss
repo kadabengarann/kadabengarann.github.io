@@ -40,6 +40,15 @@ header {
     height: 100vh;
 }
 
+.err {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 100vw;
+    height: 100%;
+}
+
 .wrapper {
     height: 100%;
     padding-right: 5rem;
