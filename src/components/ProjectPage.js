@@ -19,7 +19,7 @@ const ProjectPage = () => {
           <div className="content_section" data-scroll data-scroll-speed="0">
             <div className="projects_section -detail" id="direction">
               <h1
-                className="section-title projects"
+                className="section-title project"
                 data-scroll-call="testEvent1"
                 data-scroll-repeat="true"
                 data-scroll

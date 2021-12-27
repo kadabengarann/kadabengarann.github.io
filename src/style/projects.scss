@@ -9,3 +9,17 @@
     transform: translate(25%, 486%) rotate(-90deg);
     transform-origin: 0% 50% 0;
 }
+
+@media screen and (max-width: 1024px) {
+    .projectsList {
+        .section-title.--projects {
+            top: 0;
+            transform: none;
+            left: 34.375rem;
+        }
+
+        .project_section {
+            padding-top: 150px;
+        }
+    }
+}

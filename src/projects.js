@@ -2,7 +2,7 @@ const projects = [
   {
     id: 1,
     name: "Flexidy",
-    desc: "Sprain of joints and ligaments of unspecified parts of neck",
+    desc: "Sprain of joints and ligaments of unspecified parts of neck  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur architecto cumque accusantium rerum mollitia in. Aliquid nam ad earum quod porro iure facilis ducimus minima cupiditate omnis rem, molestias unde nisi! Dolores vero delectus voluptatem atque. Veniam nisi voluptas at blanditiis suscipit libero quis saepe amet iusto quo, voluptatem dolores obcaecati tempora. Eaque totam at iure sit atque, minima odit voluptatum vel in et eum explicabo ea dicta quod?",
     thumb: require("./img/bg-jumbo-1.jpg"),
     img: require("./img/bg-jumbo-1.jpg"),
     img2: require("./img/bg-jumbo-1.jpg"),

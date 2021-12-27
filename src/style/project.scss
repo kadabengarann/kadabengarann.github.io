@@ -2,7 +2,7 @@
     display: block;
 }
 
-.section-title.projects {
+.section-title.project {
     font-weight: 200;
     font-size: 7.5em;
     width: 100vh;
@@ -55,7 +55,8 @@
     right: 0;
     top: 50%;
     bottom: 0;
-    height: 50vh
+    height: 50vh;
+    background-size: cover;
 }
 
 .project_images_col.bottom .project_image_wrapper {
@@ -145,3 +146,86 @@ a.c-brand_logo:hover {
     border: 1px solid #fff;
     color: black;
 }
+
+@media screen and (max-width: 1024px) {
+    .section-title.project {
+        transform: none;
+        position: unset;
+
+    }
+
+    .projects_section.-detail {
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 50px;
+    }
+
+    .project_images {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    .project_images_col {
+        height: auto;
+    }
+
+    .project_images_col.bottom {
+        width: 50%;
+    }
+
+    .project_images_col.bottom .project_image_wrapper {
+        top: 0;
+    }
+
+    .project_image_wrapper {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 50vw;
+    }
+
+    .project_images_col.top {
+        width: 50%;
+        height: 90vw;
+        margin-left: 0;
+    }
+
+    .project_images_col.top .project_image_wrapper {
+        top: auto;
+        height: 60vw;
+        margin-left: -2.5rem;
+    }
+
+    .project_images .c-brand_logo_wrapper {
+        margin: auto;
+        top: auto;
+        position: relative;
+        transform: translateY(-50%);
+        left: auto;
+    }
+
+    .c-brand_logo_wrapper {
+        width: 160px;
+
+    }
+
+    .project_content {
+        max-width: 100%;
+        // padding: 1.5rem;        
+        margin-top: -65px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .c-brand_logo_wrapper {
+        width: 145px;
+    }
+
+    .project_content {
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {}

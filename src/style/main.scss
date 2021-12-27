@@ -747,7 +747,7 @@ button:hover {
 .block_details_photo.is-inview .back {
     // transition-delay: .11s;
     // background-image: url('https://homesociete.ca/uploads/2019/06/must-1-1.jpg');
-    background-size: 100%;
+    background-size: cover;
     opacity: 100%;
 
 }
@@ -982,7 +982,7 @@ button:hover {
     .home_keyvisual {
         width: 102vw;
         height: 100vh;
-        top: -80px;
+        // top: -80px;
         position: relative;
     }
 
@@ -1101,8 +1101,12 @@ button:hover {
         border-right: none;
         border-bottom: 1px solid #9f9f9f;
         flex-direction: row;
-        overflow: hidden;
+        // overflow: hidden;
         padding-bottom: 40px;
+    }
+
+    .block_details_text {
+        max-height: 280px;
     }
 
     .block_details_photo {
@@ -1112,6 +1116,13 @@ button:hover {
     .hole {
         height: 85%;
         margin: auto;
+    }
+
+    .back {
+        top: 2px;
+        background-color: lightblue;
+        width: 98%;
+        height: 270px;
     }
 
     .c-brand_logo_wrapper.-middle {
