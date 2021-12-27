@@ -1,5 +1,6 @@
 const projects = [
   {
+    id: 1,
     name: "Flexidy",
     desc: "Sprain of joints and ligaments of unspecified parts of neck",
     thumb:  require('../img/bg-jumbo-1.jpg'),

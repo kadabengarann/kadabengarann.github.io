@@ -7,8 +7,10 @@ import "../style/projects.scss";
 
 const projects = require("./projects");
 
-const ProjectPage = () => {
-    const { projectId } = useParams();
+const ProjectPage = ({ match, location }) =>{
+  const { projectId } = useParams();
+  const project = projects.find((p) => p.id === Number(projectId));
+  console.log(project);
   return (
               <><section className="section2" data-scroll-section id="data-sec2">
         <div className="content_section" data-scroll data-scroll-speed="0">
@@ -19,7 +21,7 @@ const ProjectPage = () => {
               <div className="section-title-container" data-scroll data-scroll-direction="horizontal"
                 data-scroll-speed="1" data-scroll-target="#direction">
                 <div className="section-title-inner">
-                  <span className="section-title-inner-text">{projectId}</span>
+                  <span className="section-title-inner-text">{project.name}</span>
                 </div>
                 <div className="section-title-inner">
                   <span className="section-title-inner-text">Projects</span>
