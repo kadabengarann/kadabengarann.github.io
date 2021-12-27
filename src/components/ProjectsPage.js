@@ -50,7 +50,7 @@ const ProjectsPage = () => {
                     className="o-link">
                     View details
                   </a> */}
-                          <a href={`/project`} 
+                          <a href={`/project/projectId`} 
                     className="o-link">
                     View details
                   </a>
