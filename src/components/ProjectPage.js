@@ -13,11 +13,11 @@ const ProjectPage = () => {
   return (
     <>
             <p style={{color: "red"}}>
-        <strong>User ID: </strong>
+        <strong>Project ID: </strong>
         {projectId}
       </p>
       <p style={{color: "red"}}>
-        <strong>User Name: </strong>
+        <strong>Project Name: </strong>
         {projects[projectId - 1].name}
       </p>
 
