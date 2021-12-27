@@ -6,6 +6,7 @@ $width-home: 84.6vw;
     margin: 0;
 }
 
+
 body {
     height: 100vh;
     font-family: 'Manrope', sans-serif;
@@ -29,6 +30,7 @@ a.anchor {
     position: relative;
     // top: -60px;
     visibility: hidden;
+    right: -170px;
 }
 
 header {
@@ -318,13 +320,18 @@ section.small {
     flex-direction: column;
 }
 
+.section1 {
+    display: inline-block;
+}
+
 .content_section {
     position: relative;
-    left: calc((-63vw - 26.5rem) / 8);
+    // left: calc((100vw - -247.5rem) / 8);
     display: flex !important;
     width: fit-content;
     background-color: #fff;
-    margin-right: calc(((-63vw - 26.5rem) / 8) + 100vw - 145px);
+    // margin-right: calc(((-63vw - 26.5rem) / 8) + 100vw - 145px);
+    margin-right: calc(102vw);
     // margin-right: 780px;
     height: 100vh;
 }
@@ -386,10 +393,6 @@ hr.divider {
 
 .header {
     width: fit-content;
-}
-
-.section2 {
-    // background-color: rgb(160, 206, 54);
 }
 
 .text_zone {
@@ -564,7 +567,7 @@ button:hover {
     min-width: 100vw;
     padding-left: 150px;
     display: flex;
-    padding-right: 50px;
+    padding-right: 220px;
 }
 
 .section-title {
@@ -604,11 +607,14 @@ button:hover {
 
 .block_details_inner {
     width: inherit;
+    height: 100%;
     border-right: 1px solid #ccc;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-around;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .block_details_text {
@@ -705,26 +711,35 @@ button:hover {
 }
 
 .block_details_photo {
+    position: relative;
     margin-top: 20px;
     width: 99%;
     overflow: hidden;
+    height: 280px;
 }
 
 .back {
+    position: absolute;
+    z-index: 0;
+    top: 0;
     background-color: lightblue;
     width: 100%;
     height: 280px;
-    background-image: url('https://homesociete.ca/uploads/2021/12/Campagne-HS%E2%80%94Boxing-Day-2021-_homepage_445x370-1-445x370.jpg');
-    transition: background-size .8s cubic-bezier(.25, .46, .45, .94);
-    background-size: 130%;
+    background-image: url('https://picsum.photos/seed/weed/400');
+    transition: all .8s cubic-bezier(.25, .46, .45, .94);
+
+    // transition: opacity .8s cubic-bezier(.25, .46, .45, .94); // transition: background-size .8s cubic-bezier(.25, .46, .45, .94);
+    background-size: 150%;
     background-position: center;
+    opacity: 0;
     // background-position-y: 64px;
 }
 
 .block_details_photo.is-inview .back {
-    transition-delay: .11s;
+    // transition-delay: .11s;
     // background-image: url('https://homesociete.ca/uploads/2019/06/must-1-1.jpg');
     background-size: 100%;
+    opacity: 100%;
 
 }
 
@@ -738,6 +753,7 @@ button:hover {
     background-color: white;
     mix-blend-mode: hard-light;
     display: flex;
+    z-index: 1;
 
 }
 
@@ -778,9 +794,17 @@ button:hover {
     pointer-events: auto;
 }
 
-.back:hover {
-    background-size: 110% !important;
+.block_details_photo:hover .back {
+    background-size: 110%;
+    // opacity: 50%;
+    // display: none;
+    transition: background-size .8s cubic-bezier(.25, .46, .45, .94);
 
+}
+
+.c-brand_logo_wrapper.-middle {
+    right: 220px;
+    top: 39vh;
 }
 
 .footer {
@@ -854,6 +878,26 @@ button:hover {
     transition: color .3s;
 }
 
+.loader {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 999;
+    opacity: 100%;
+    transition: all .3s cubic-bezier(.25, .46, .45, .94);
+
+}
+
+.loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s cubic-bezier(.25, .46, .45, .94);
+
+}
+
 // ----------- Responsive --------------------
 
 @media screen and (max-width: 1024px) {
@@ -890,6 +934,10 @@ button:hover {
         border-right: 0;
     }
 
+    .navbar_links {
+        padding-bottom: 12vh;
+    }
+
     // .navbar.bordered.open {
     //     border-right: 1px solid #ccc;
     // }
@@ -903,9 +951,14 @@ button:hover {
         border: 1px solid #ccc;
     }
 
+    .section1,
+    .section2 {
+        overflow: hidden;
+    }
+
     .section1 {
         pointer-events: none;
-        // display: block !important;
+        display: block !important;
     }
 
     .section1>* {
@@ -918,39 +971,41 @@ button:hover {
     }
 
     .home_keyvisual {
-        width: 100vw;
-        height: 110vh;
-
+        width: 102vw;
+        height: 100vh;
+        top: -80px;
+        position: relative;
     }
 
     .home_keyvisual img {
         width: 100%;
-        height: 100%;
+        height: 110%;
     }
 
     .home_title {
-        top: 50vh;
+        top: 45vh;
     }
 
     .section2 {
-        height: auto;
+        height: fit-content;
         width: 100vw;
+        padding-bottom: 1px;
     }
 
     .content_section {
         width: 100vw;
         height: fit-content;
         flex-direction: column;
-        position: relative;
+        // position: relative;
         // top: 0vh;
         // top: -76px;
-        left: 0;
-        top: calc((57vh - 83.5rem) / 7);
-        bottom: calc(((57vh - 83.5rem) / -7));
+        // left: 0;
+        // top: calc((57vh - 83.5rem) / 7);
+        // bottom: calc(((57vh - 83.5rem) / -7));
         margin-bottom: calc(100vh);
         // margin-bottom: calc(((57vh - 83.5rem) / 7) + 100vw + 410px);
 
-        margin-right: 0;
+        // margin-right: 0;
     }
 
     .about_section {
@@ -1000,6 +1055,7 @@ button:hover {
         flex-direction: column;
         padding-left: 100px;
         padding-right: 100px;
+        padding-bottom: 170px;
     }
 
     .section-title {
@@ -1009,6 +1065,7 @@ button:hover {
         padding-top: 15px;
         width: auto;
         font-size: 5.5em;
+        // overflow: hidden;
     }
 
     .section-title-inner {
@@ -1021,28 +1078,6 @@ button:hover {
 
     .section-title-inner::before {
         content: "";
-        // display: none;
-    }
-
-    // .section-title-inner::after {
-    //     content: "";
-    //     position: absolute;
-    //     bottom: 0;
-    //     left: 0;
-    //     height: 1px;
-    //     width: 8.5rem;
-    //     // margin: 0 3.75rem;
-    //     display: inline-block;
-    //     background-color: #1a1a1a;
-    //     vertical-align: middle;
-    // }
-
-    .section-title-inner:nth-child(2) {
-        // display: none;
-    }
-
-    .section-title-inner:nth-child(3) {
-        // display: none;
     }
 
     .block_details {
@@ -1070,11 +1105,25 @@ button:hover {
         margin: auto;
     }
 
+    .c-brand_logo_wrapper.-middle {
+        right: 50vw;
+        top: auto;
+        bottom: 90px;
+    }
+
+    a.anchor {
+        right: 0;
+        bottom: -170px;
+    }
+
     .footer {
         position: fixed;
-        left: 0;
-        width: 100vw;
         z-index: -1;
+        // position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100vw;
+        // z-index: -1;
     }
 
     .footer_talk {
@@ -1144,8 +1193,20 @@ button:hover {
         display: none;
     }
 
+    .base {
+        top: -11px;
+        left: -1px;
+        width: 101%;
+        height: 110%;
+    }
+
+    .back {
+        width: 101%;
+    }
+
     .hole {
         width: 100%;
+        height: 75%;
     }
 
     .footer_top {
