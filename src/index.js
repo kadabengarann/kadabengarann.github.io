@@ -1,18 +1,30 @@
-import "./style/main.scss";
-
 import LocomotiveScroll from "locomotive-scroll";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
 
-const scroll = new LocomotiveScroll({
+
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+
+
+let scroll = new LocomotiveScroll({
   el: document.querySelector("[data-scroll-container]"),
   smooth: true,
   direction: 'horizontal',
   smartphone: {
     direction: 'vertical',
-    smooth: true,
+    smooth: false,
   },
   tablet: {
     direction: 'vertical',
-    smooth: true,
+    smooth: false,
   },
 });
 
@@ -29,7 +41,8 @@ async function loaded() {
   loader.classList.add("hidden");
 }
 
-const mainContainer = document.querySelector(".section1");
+
+const mainContainer = document.querySelector("#root");
 
 const widthStart  = window.innerWidth || document.documentElement.clientWidth || 
 document.body.clientWidth;
@@ -38,6 +51,7 @@ if (widthStart <= 1024) {
   console.log('kecil');
   if (!(mainContainer.classList.contains('small')))
  {
+   console.log('tambah kelas');
           mainContainer.classList.add("small");
   }
 }
@@ -79,33 +93,44 @@ document.body.clientHeight;
 if (width <= 1024) {
   if (!(mainContainer.classList.contains('small')))
  {
-  document.location.reload(true);
-  }
+  console.log('kecil');          mainContainer.classList.add("small");
+  scroll.destroy()
+    scroll = new LocomotiveScroll({
+  el: document.querySelector("[data-scroll-container]"),
+  smooth: false,
+  direction: 'vertical',
+  smartphone: {
+    direction: 'vertical',
+    smooth: false,
+  },
+  tablet: {
+    direction: 'vertical',
+    smooth: false,
+  },
+});   
+}
 
 } else {
   if (mainContainer.classList.contains('small'))
  {
-   document.location.reload(true)
+   console.log('besar');  
+   setTimeout(mainContainer.classList.remove("small"), 1000);
+   scroll.destroy()
+    scroll = new LocomotiveScroll({
+  el: document.querySelector("[data-scroll-container]"),
+  smooth: true,
+  direction: 'horizontal',
+  smartphone: {
+    direction: 'vertical',
+    smooth: false,
+  },
+  tablet: {
+    direction: 'vertical',
+    smooth: false,
+  },
+});   
   }
 
 }
  console.log(width, height);
 }, true);
-
-//     // console.log('ganti');
-// document.addEventListener("DOMContentLoaded", function () {
-//   const judul = document.querySelector(".section-title");
-
-// const navbar = document.querySelector(".navbar");
-
-// if (!(judul.classList.contains("is-inview"))) {
-// }else{
-//       navbar.classList.remove("bordered");
-// }
-
-// })
-
-// scroll.on('call', () => {
-//     const navbar = document.querySelector(".navbar");
-//   navbar.classList.toggle("bordered");
-// });

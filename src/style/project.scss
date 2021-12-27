@@ -1,0 +1,147 @@
+.projects_section.-detail {
+    display: block;
+}
+
+.section-title.projects {
+    font-weight: 200;
+    font-size: 7.5em;
+    width: 100vh;
+    position: absolute;
+    top: 12%;
+    left: -7.625rem;
+    -webkit-transform: translate(25%, 486%) rotate(-90deg);
+    transform: translate(25%, 486%) rotate(-90deg);
+    transform-origin: 0% 50% 0;
+}
+
+.project_images_grid {
+    position: relative;
+}
+
+.project_images {
+    width: 60vw;
+    height: 100vh;
+    display: inline-block;
+    margin-left: 2.5rem;
+    padding: 2.5rem 0 2.5rem 2.5rem;
+}
+
+.o-layout_item {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    font-size: 1rem;
+    padding-left: 0;
+}
+
+.project_images_col {
+    position: relative;
+    vertical-align: top;
+    height: calc(100vh - 5rem);
+}
+
+.project_images_col.bottom {
+    width: 66.66667%;
+}
+
+.project_images_col.top {
+    width: 33.33333%;
+    margin-left: -3.75rem;
+}
+
+.project_image_wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    bottom: 0;
+    height: 50vh
+}
+
+.project_images_col.bottom .project_image_wrapper {
+    bottom: 0;
+    top: auto;
+}
+
+.project_images_col.top .project_image_wrapper {
+    top: 0;
+}
+
+.c-brand_logo_wrapper {
+    position: absolute;
+    right: 0;
+    top: 7.5rem;
+    background-color: #1e1e1e;
+    border-radius: 50%;
+    width: 12.5rem;
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+    color: #fff;
+    z-index: 10;
+}
+
+.c-brand_logo_wrapper:before {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.c-brand_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a.c-brand_logo,
+a.c-brand_logo:focus,
+a.c-brand_logo:hover {
+    color: #fff;
+}
+
+.project_content {
+    display: inline-block;
+    width: 28.75rem;
+    white-space: normal;
+    margin-right: 7.5rem;
+    padding: 2.5rem 3.75rem;
+    vertical-align: bottom;
+    margin-bottom: 7.5rem;
+}
+
+.project_content_text {
+    color: #aaa;
+    font-size: .875rem;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.project_content_link {
+    font-size: .875rem;
+    margin-top: 2.25rem;
+    width: fit-content;
+}
+
+.project_content_link.o-button {
+    border: 1px solid #1e1e1e;
+    padding: .625rem .9375rem;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    background-color: #1e1e1e;
+    border-radius: 20px;
+
+}
+
+.project_content_link.o-button:focus,
+.project_content_link.o-button:hover {
+    border: 1px solid #fff;
+    color: black;
+}

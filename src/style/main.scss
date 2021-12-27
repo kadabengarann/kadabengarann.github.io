@@ -30,6 +30,7 @@ a.anchor {
     position: relative;
     // top: -60px;
     visibility: hidden;
+    right: -170px;
 }
 
 header {
@@ -319,6 +320,10 @@ section.small {
     flex-direction: column;
 }
 
+.section1 {
+    display: inline-block;
+}
+
 .content_section {
     position: relative;
     // left: calc((100vw - -247.5rem) / 8);
@@ -562,7 +567,7 @@ button:hover {
     min-width: 100vw;
     padding-left: 150px;
     display: flex;
-    padding-right: 50px;
+    padding-right: 220px;
 }
 
 .section-title {
@@ -602,11 +607,14 @@ button:hover {
 
 .block_details_inner {
     width: inherit;
+    height: 100%;
     border-right: 1px solid #ccc;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-around;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .block_details_text {
@@ -718,10 +726,10 @@ button:hover {
     width: 100%;
     height: 280px;
     background-image: url('https://picsum.photos/seed/weed/400');
-    transition: all .3s cubic-bezier(.25, .46, .45, .94);
+    transition: all .8s cubic-bezier(.25, .46, .45, .94);
 
     // transition: opacity .8s cubic-bezier(.25, .46, .45, .94); // transition: background-size .8s cubic-bezier(.25, .46, .45, .94);
-    // background-size: 150%;
+    background-size: 150%;
     background-position: center;
     opacity: 0;
     // background-position-y: 64px;
@@ -730,7 +738,7 @@ button:hover {
 .block_details_photo.is-inview .back {
     // transition-delay: .11s;
     // background-image: url('https://homesociete.ca/uploads/2019/06/must-1-1.jpg');
-    // background-size: 100%;
+    background-size: 100%;
     opacity: 100%;
 
 }
@@ -787,11 +795,16 @@ button:hover {
 }
 
 .block_details_photo:hover .back {
-    // background-size: 110%;
-    opacity: 50%;
+    background-size: 110%;
+    // opacity: 50%;
     // display: none;
     transition: background-size .8s cubic-bezier(.25, .46, .45, .94);
 
+}
+
+.c-brand_logo_wrapper.-middle {
+    right: 220px;
+    top: 39vh;
 }
 
 .footer {
@@ -938,9 +951,14 @@ button:hover {
         border: 1px solid #ccc;
     }
 
+    .section1,
+    .section2 {
+        overflow: hidden;
+    }
+
     .section1 {
         pointer-events: none;
-        // display: block !important;
+        display: block !important;
     }
 
     .section1>* {
@@ -1037,6 +1055,7 @@ button:hover {
         flex-direction: column;
         padding-left: 100px;
         padding-right: 100px;
+        padding-bottom: 170px;
     }
 
     .section-title {
@@ -1046,6 +1065,7 @@ button:hover {
         padding-top: 15px;
         width: auto;
         font-size: 5.5em;
+        // overflow: hidden;
     }
 
     .section-title-inner {
@@ -1085,8 +1105,19 @@ button:hover {
         margin: auto;
     }
 
+    .c-brand_logo_wrapper.-middle {
+        right: 50vw;
+        top: auto;
+        bottom: 90px;
+    }
+
+    a.anchor {
+        right: 0;
+        bottom: -170px;
+    }
+
     .footer {
-        position: absolute;
+        position: fixed;
         z-index: -1;
         // position: fixed;
         left: 0;
