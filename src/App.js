@@ -5,11 +5,21 @@ import ProjectPage from "./components/ProjectPage";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, useLocation } from "react-router-dom";
 import "./style/main.scss";
 import NoMatchPage from "./components/NoMatchPage";
 
+
+
+// function useQuery() {
+//   const { search } = useLocation();
+
+//   return React.useMemo(() => new URLSearchParams(search), [search]);
+// }
+
 function App() {
+  // let query = useQuery();
+
   return (
     <Router>
       <header>
@@ -24,12 +34,12 @@ function App() {
           <Route exact path="/projects">
             <ProjectsPage />
           </Route>
-          <Route path="/project/:projectId">
+          <Route exact path="/project">
             <ProjectPage/>
           </Route>
-          <Route>
+          {/* <Route>
             <NoMatchPage/>
-          </Route>
+          </Route> */}
         </Switch>
       </main>
     </Router>
