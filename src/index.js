@@ -3,16 +3,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
-
-
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-
 
 let scroll = new LocomotiveScroll({
   el: document.querySelector("[data-scroll-container]"),
@@ -29,9 +25,7 @@ let scroll = new LocomotiveScroll({
 });
 
 window.addEventListener("load", function () {
-  
   loaded();
-
 })
 async function loaded() {
   const loader = document.querySelector(".loader");

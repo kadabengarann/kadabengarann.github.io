@@ -2,9 +2,11 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import ProjectsPage from "./components/ProjectsPage";
 import ProjectPage from "./components/ProjectPage";
-import React from 'react';
+import NoMatchPage from "./components/NoMatchPage";
 
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch, useLocation } from "react-router-dom";
+
 import "./style/main.scss";
 
 function App() {
@@ -22,10 +24,12 @@ function App() {
           <Route exact path="/projects">
             <ProjectsPage />
           </Route>
-          <Route exact path="/project/:projectId">
+          <Route exact path="/project">
             <ProjectPage/>
           </Route>
-          <Route>{/* <NoMatchPage/> */}</Route>
+          <Route>
+            <NoMatchPage/>
+          </Route>
         </Switch>
       </main>
     </Router>
