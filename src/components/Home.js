@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
 import Footer from "./Footer";
 
 const projects = require('../projects').default;
