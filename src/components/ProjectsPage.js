@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "./Footer";
 import "../style/projects.scss";
+import ProjectList from "./ProjectList";
 
 const projects = require("../projects").default;
 
@@ -8,10 +9,10 @@ const ProjectsPage = () => {
   return (
     <>
       <section className="section2" data-scroll-section id="data-sec2">
-        <div className="content_section" data-scroll data-scroll-speed="0">
-          <div className="projects_section" id="direction">
+        <div className="content_section projectsList" data-scroll data-scroll-speed="0">
+          <div className="projects_section --projects" id="direction">
             <h1
-              className="section-title projects"
+              className="section-title --projects"
               data-scroll-call="testEvent1"
               data-scroll-repeat="true"
               data-scroll
@@ -37,52 +38,7 @@ const ProjectsPage = () => {
             </h1>
             {projects.map((project, index) => (
               <div key={index}>
-                <section className="block_details">
-                  <div className="block_details_inner">
-                    <div
-                      className="block_details_text"
-                      data-scroll-repeat="false"
-                      data-scroll
-                      data-scroll-offset="200"
-                    >
-                      <h1 className="block_details_title">{project.name}</h1>
-                      <p>{project.desc}</p>
-                      <div className="block_details_links" data-scroll>
-                        <a
-                          href={project.demo}
-                          target="_blank"
-                          className="o-link"
-                        >
-                          Visit website
-                        </a>
-                      </div>
-                    </div>
-                    <div
-                      className="block_details_photo"
-                      data-scroll
-                      data-scroll-offset="200"
-                    >
-                      <div className="base">
-                        <div className="hole">
-                          <a
-                            href={`/project?id=` + (index + 1)}
-                            className="o-link"
-                          >
-                            View details
-                          </a>
-                        </div>
-                      </div>
-                      <div
-                        style={{
-                          backgroundImage: "url(" + project.thumb + ")",
-                        }}
-                        className="back"
-                        data-scroll
-                        data-scroll-speed="-0.8"
-                      ></div>
-                    </div>
-                  </div>
-                </section>
+                <ProjectList project={project}/>
               </div>
             ))}
             <a className="anchor" id="contact" data-scroll></a>
