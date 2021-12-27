@@ -25,7 +25,6 @@ const lim = 270;
                       <div className="block_details_links" data-scroll>
                         <a
                           href={`/project?id=` + project.id}
-                          target="_blank"
                           className="o-link"
                         >
                           View details
