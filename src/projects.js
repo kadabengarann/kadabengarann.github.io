@@ -2,7 +2,7 @@ const projects = [
   {
     id: 1,
     name: "Flexidy",
-    desc: "Sprain of joints and ligaments of unspecified parts of neck  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur architecto cumque accusantium rerum mollitia in. Aliquid nam ad earum quod porro iure facilis ducimus minima cupiditate omnis rem, molestias unde nisi! Dolores vero delectus voluptatem atque. Veniam nisi voluptas at blanditiis suscipit libero quis saepe amet iusto quo, voluptatem dolores obcaecati tempora. Eaque totam at iure sit atque, minima odit voluptatum vel in et eum explicabo ea dicta quod?",
+    desc: "Just a dummy text, no biggie. Sprain of joints and ligaments of unspecified parts of neck  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur architecto cumque accusantium rerum mollitia in. Aliquid nam ad earum quod porro iure facilis ducimus minima cupiditate omnis rem, molestias unde nisi! Dolores vero delectus voluptatem atque. Veniam nisi voluptas at blanditiis suscipit libero quis saepe amet iusto quo, voluptatem dolores obcaecati tempora. Eaque totam at iure sit atque, minima odit voluptatum vel in et eum explicabo ea dicta quod?",
     thumb: require("./img/bg-jumbo-1.jpg"),
     img: require("./img/bg-jumbo-1.jpg"),
     img2: require("./img/bg-jumbo-1.jpg"),
@@ -11,7 +11,7 @@ const projects = [
   {
     id: 2,
     name: "Latlux",
-    desc: "War operations involving intentional restriction of air and airway, military personnel, initial encounter",
+    desc: "Just a placeholder text and placeholder project. Real project soon will be added. restriction of air and airway, military personnel, initial encounter",
     thumb: require("./img/bg-jumbo-2.jpg"),
     img: require("./img/bg-jumbo-2.jpg"),
     img2: require("./img/bg-jumbo-2.jpg"),
@@ -19,8 +19,8 @@ const projects = [
   },
   {
     id: 3,
-    name: "Tresom",
-    desc: "Nondisplaced fracture of shaft of other metacarpal bone",
+    name: "Nondisplaced",
+    desc: "Just a placeholder text and placeholder project. Real project soon will be added",
     thumb: require("./img/bg-jumbo-3.jpg"),
     img: require("./img/bg-jumbo-3.jpg"),
     img2: require("./img/bg-jumbo-3.jpg"),
@@ -29,7 +29,7 @@ const projects = [
   {
     id: 4,
     name: "Voyatouch",
-    desc: "Charcot's joint",
+    desc: "Just a dummy text, no biggie. Sprain of joints and ligaments of unspecified parts of neck  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur architecto cumque accusantium rerum mollitia in. Aliquid nam ad earum quod porro iure facilis ducimus minima cupiditate omnis rem, molestias unde nisi! Dolores vero delectus voluptatem atque. Veniam nisi voluptas at blanditiis suscipit libero quis saepe amet iusto quo, voluptatem dolores obcaecati tempora. Eaque totam at iure sit atque, minima odit voluptatum vel in et eum explicabo ea dicta quod?",
     thumb: require("./img/bg-jumbo-1.jpg"),
     img: require("./img/bg-jumbo-1.jpg"),
     img2: require("./img/bg-jumbo-1.jpg"),
@@ -38,7 +38,7 @@ const projects = [
   {
     id: 5,
     name: "Bigtax",
-    desc: "Exposure to other electric current",
+    desc: "Just a dummy text, no biggie. Sprain of joints and ligaments of unspecified parts of neck  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur architecto cumque accusantium rerum mollitia in. Aliquid nam ad earum quod porro iure facilis ducimus minima cupiditate omnis rem, molestias unde nisi! Dolores vero delectus voluptatem atque. Veniam nisi voluptas at blanditiis suscipit libero quis saepe amet iusto quo, voluptatem dolores obcaecati tempora. Eaque totam at iure sit atque, minima odit voluptatum vel in et eum explicabo ea dicta quod?",
     thumb: require("./img/bg-jumbo-2.jpg"),
     img: require("./img/bg-jumbo-2.jpg"),
     img2: require("./img/bg-jumbo-2.jpg"),
