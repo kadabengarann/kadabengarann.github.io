@@ -4,7 +4,6 @@
 
 .section-title.project {
     font-weight: 200;
-    font-size: 7.5em;
     width: 100vh;
     position: absolute;
     top: 12%;
@@ -149,9 +148,10 @@ a.c-brand_logo:hover {
 
 @media screen and (max-width: 1024px) {
     .section-title.project {
-        transform: none;
         position: unset;
-
+        top: 0;
+        transform: none;
+        left: 30.375rem;
     }
 
     .projects_section.-detail {

@@ -1,8 +1,6 @@
 .section-title.--projects {
     font-weight: 200;
-    font-size: 7.5em;
     width: 100vh;
-    position: unset;
     top: 12%;
     left: -7.625rem;
     -webkit-transform: translate(25%, 486%) rotate(-90deg);
@@ -13,9 +11,10 @@
 @media screen and (max-width: 1024px) {
     .projectsList {
         .section-title.--projects {
+            position: unset;
             top: 0;
             transform: none;
-            left: 34.375rem;
+            left: 30.375rem;
         }
 
         .project_section {
