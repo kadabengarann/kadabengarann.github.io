@@ -52,7 +52,7 @@ const projects = [
     id: 6,
     name: "Rock Paper Scissors Game",
     shortName: "Rock-Paper-Scissors",
-    desc: "Frontendmentor's Rock Paper Scissors Challenge",, subsequent encounter",
+    desc: "Frontendmentor's Rock Paper Scissors Challenge, subsequent encounter",
     thumb: require("./img/bg-jumbo-3.jpg"),
     img: require("./img/bg-jumbo-3.jpg"),
     img2: require("./img/bg-jumbo-3.jpg"),
