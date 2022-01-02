@@ -3,7 +3,7 @@ import {useState} from 'react';
 import React from "react";
 import Footer from "./Footer";
 import ProjectList from './ProjectList';
-
+import Pdf from 'url:../pdf/Resume-Ardhy-Satrio.pdf';
 const projects = require("../projects").default;
 
 function isExpandable(text) {
@@ -50,7 +50,7 @@ const Home = () => {
                   syllables.
                 </p>
               </div>
-              <a className="c-cta_button o-button-norm" href="#">
+              <a className="c-cta_button o-button-norm" href={Pdf} target = "_blank">
                 {" "}
                 Get my Resume{" "}
               </a>
