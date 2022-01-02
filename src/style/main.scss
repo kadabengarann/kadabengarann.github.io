@@ -1086,11 +1086,14 @@ button:hover {
   .section-title-inner::before {
     content: "";
   }
-
+  .section-title-inner-text{
+    white-space: nowrap;
+  }
   .block_details {
     // height: 100vh;
     height: auto;
     // padding: 40px 0;
+    padding: 0 0 40px 0;
     width: 100%;
   }
 
@@ -1101,10 +1104,12 @@ button:hover {
     flex-direction: row;
     // overflow: hidden;
     padding-bottom: 40px;
+    padding-top: 0;
   }
 
   .block_details_text {
     max-height: 280px;
+    width: 100%;
   }
 
   .block_details_photo {
@@ -1203,13 +1208,12 @@ button:hover {
   .block_details {
     padding-bottom: 0;
   }
-
-  .block_details_inner {
-    flex-direction: column;
+  .block_details_title {
+    font-size: 30.4px;
   }
-
-  .block_details_text > :nth-child(2) {
-    display: none;
+  .block_details_inner {
+    padding-top: 25px;
+    flex-direction: column;
   }
 
   .base {
@@ -1457,20 +1461,13 @@ button:hover {
 }
 @media screen and (max-width: 1280px) {
   .marquee {
-    width: 65px;
-    height: 38px;
   }
   .hero--headline span.underline:after {
     border-width: 0 0 1.25px !important;
   }
-  .hoverImg {
-    max-width: 30vw;
-  }
 }
 @media screen and (max-width: 890px) {
   ._w-title {
-    font-size: 14px;
-    text-transform: uppercase;
     line-height: 1;
     color: #010101;
   }
