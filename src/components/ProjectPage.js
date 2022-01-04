@@ -79,7 +79,7 @@ const ProjectPage = () => {
                       className="c-brand_logo"
                       data-pjax-state=""
                     >
-                      {project.name}
+                      {project.shortName}
                     </a>
                   </figure>
                 </div>
@@ -95,6 +95,7 @@ const ProjectPage = () => {
                   </p>
                   <a
                     href={project.demo}
+                    target="_blank"
                     className="project_content_link o-button"
                   >
                     Visit website

@@ -10,29 +10,30 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-let scroll = new LocomotiveScroll({
-  el: document.querySelector("[data-scroll-container]"),
-  smooth: true,
-  direction: 'horizontal',
-  smartphone: {
-    direction: 'vertical',
-    smooth: false,
-  },
-  tablet: {
-    direction: 'vertical',
-    smooth: false,
-  },
-});
-
 window.addEventListener("load", function () {
   loaded();
 })
+let scroll;
+
 async function loaded() {
   const loader = document.querySelector(".loader");
   console.log(loader);
 
   await new Promise(resolve => setTimeout(resolve, 1000));
   loader.classList.add("hidden");
+  scroll = new LocomotiveScroll({
+    el: document.querySelector("[data-scroll-container]"),
+    smooth: true,
+    direction: 'horizontal',
+    smartphone: {
+      direction: 'vertical',
+      smooth: false,
+    },
+    tablet: {
+      direction: 'vertical',
+      smooth: false,
+    },
+  });
 }
 
 
