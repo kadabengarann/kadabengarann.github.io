@@ -56,15 +56,18 @@
     bottom: 0;
     height: 50vh;
     background-size: cover;
+    background-position: center;
 }
 
 .project_images_col.bottom .project_image_wrapper {
     bottom: 0;
     top: auto;
+    background-size: 110%;
 }
 
 .project_images_col.top .project_image_wrapper {
     top: 0;
+    background-size: 180%;
 }
 
 .c-brand_logo_wrapper {
@@ -177,6 +180,7 @@ a.c-brand_logo:hover {
 
     .project_images_col.bottom .project_image_wrapper {
         top: 0;
+        background-size: 117%;
     }
 
     .project_image_wrapper {
@@ -196,6 +200,7 @@ a.c-brand_logo:hover {
         top: auto;
         height: 60vw;
         margin-left: -2.5rem;
+        background-size: 136%;
     }
 
     .project_images .c-brand_logo_wrapper {

@@ -65,7 +65,7 @@ const ProjectList = ({ project }) => {
               }}
               className="back"
               data-scroll
-              data-scroll-speed="0"
+              data-scroll-speed="-0.8"
             ></div>
           </div>
         </div>
