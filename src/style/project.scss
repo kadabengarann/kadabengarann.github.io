@@ -5,6 +5,7 @@
 .section-title.project {
     font-weight: 200;
     width: 100vh;
+
     position: absolute;
     top: 12%;
     left: -7.625rem;
@@ -12,6 +13,13 @@
     transform: translate(25%, 486%) rotate(-90deg);
     transform-origin: 0% 50% 0;
 }
+
+.section-title-marquee.-detail {
+    display: flex;
+    animation: marqueeSliderTitle linear infinite;
+    will-change: transform;
+}
+
 
 .project_images_grid {
     position: relative;

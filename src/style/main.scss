@@ -565,7 +565,7 @@ button:hover {
   background-color: #fff;
   height: 100%;
   min-width: 100vw;
-  padding-left: 150px;
+  padding-left: 160px;
   display: flex;
   padding-right: 220px;
   position: relative;
@@ -575,6 +575,7 @@ button:hover {
   font-weight: 200;
   font-size: 7.5em;
   width: 100vh;
+
   position: absolute;
   top: 50%;
   left: 0;
@@ -583,8 +584,19 @@ button:hover {
   transform: translate(0%, 486%) rotate(-90deg);
 }
 
+.section-title-marquee {
+  display: flex;
+  animation: marqueeSliderTitle 21s linear infinite;
+  will-change: transform;
+}
+
+
 .section-title-container {
   display: flex;
+  width: fit-content;
+  // animation: marqueeSliderTitle 6s linear infinite;
+  // will-change: transform;
+
 }
 
 .section-title-inner::before {
@@ -1091,6 +1103,7 @@ button:hover {
 
   .section-title-inner::before {
     content: "";
+    margin: 0 1.75rem;
   }
 
   .section-title-inner-text {
@@ -1242,7 +1255,7 @@ button:hover {
   }
 
   .footer_top {
-    padding-top: 10.5rem;
+    // padding-top: 10.5rem;
     padding-bottom: 1.5rem;
   }
 
@@ -1351,6 +1364,22 @@ button:hover {
 
   .footer_mail {
     font-size: 1.3rem;
+  }
+}
+
+@keyframes marqueeSliderTitle {
+  // 0% {
+  //   -webkit-transform: translateX(0);
+  //   -moz-transform: translateX(0);
+  //   -o-transform: translateX(0);
+  //   transform: translateX(0);
+  // }
+
+  to {
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
   }
 }
 

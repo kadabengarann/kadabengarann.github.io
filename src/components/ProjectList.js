@@ -14,7 +14,7 @@ const ProjectList = ({ project }) => {
   
   const ref = useRef(null);
   const marqcont = useRef(null);
-  const speed = 90;
+  const speed = 40;
   let duration;
   useEffect(() => {
     console.log("width", ref.current.offsetWidth);

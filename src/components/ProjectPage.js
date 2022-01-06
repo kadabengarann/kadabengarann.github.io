@@ -1,4 +1,6 @@
 import React from "react";
+import { useState, useEffect, useRef } from "react";
+
 import { useLocation } from "react-router-dom";
 
 import Footer from "./Footer";
@@ -12,6 +14,20 @@ const ProjectPage = () => {
   const id = query.get("id");
   const project = projects.find((p) => p.id === Number(id));
   console.log(project);
+
+  
+  const refs = useRef(null);
+  const marqconts = useRef(null);
+  const speeds = 5 ;
+   let duration = (project.name.length * 20 + 100) / speeds;
+
+  useEffect(() => {
+
+    console.log("lebar", refs.current.offsetWidth);
+    // duration = (refs.current.offsetWidth *2 ) / speeds;
+    console.log(duration);
+    marqconts.current.style.animationDuration = `${duration}s`;
+  }, []);
   return (
     <>
       {project ? (
@@ -23,16 +39,23 @@ const ProjectPage = () => {
                 data-scroll-call="testEvent1"
                 data-scroll-repeat="true"
                 data-scroll
-                data-scroll-offset="-1000"
+                // data-scroll-offset="-1000"
               >
                 <div
+               
                   className="section-title-container"
                   data-scroll
                   data-scroll-direction="horizontal"
-                  data-scroll-speed="1"
+                  data-scroll-speed="2"
                   data-scroll-target="#direction"
                 >
+                <div  ref={marqconts}  className="section-title-marquee -detail">
                   <div className="section-title-inner">
+                    <span  ref={refs} className="section-title-inner-text">
+                      {project.name}
+                    </span>
+                  </div>
+                  <div  className="section-title-inner">
                     <span className="section-title-inner-text">
                       {project.name}
                     </span>
@@ -47,6 +70,7 @@ const ProjectPage = () => {
                       {project.name}
                     </span>
                   </div>
+                </div>
                 </div>
               </h1>
               <div className="project_images">

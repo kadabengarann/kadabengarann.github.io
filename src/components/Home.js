@@ -71,15 +71,16 @@ const Home = () => {
               data-scroll-call="testEvent1"
               data-scroll-repeat="true"
               data-scroll
-              data-scroll-offset="-1000"
+              // data-scroll-offset="-1000"
             >
               <div
                 className="section-title-container"
                 data-scroll
                 data-scroll-direction="horizontal"
-                data-scroll-speed="1"
+                data-scroll-speed="2"
                 data-scroll-target="#direction"
               >
+                <div className="section-title-marquee">
                 <div className="section-title-inner">
                   <span className="section-title-inner-text">Projects</span>
                 </div>
@@ -88,6 +89,10 @@ const Home = () => {
                 </div>
                 <div className="section-title-inner">
                   <span className="section-title-inner-text">Projects</span>
+                </div>
+                <div className="section-title-inner">
+                  <span className="section-title-inner-text">Projects</span>
+                </div>
                 </div>
               </div>
             </h1>

@@ -1,4 +1,6 @@
 import React from "react";
+import { useState, useEffect, useRef } from "react";
+
 import Footer from "./Footer";
 import "../style/projects.scss";
 import ProjectList from "./ProjectList";
@@ -22,10 +24,11 @@ const ProjectsPage = () => {
                 className="section-title-container"
                 data-scroll
                 data-scroll-direction="horizontal"
-                data-scroll-speed="1"
+                data-scroll-speed="2"
                 data-scroll-target="#direction"
               >
-                <div className="section-title-inner">
+                <div ref={marqcontss} className="section-title-marquee">
+                  <div ref={refss} className="section-title-inner">
                   <span className="section-title-inner-text">Projects</span>
                 </div>
                 <div className="section-title-inner">
@@ -33,6 +36,10 @@ const ProjectsPage = () => {
                 </div>
                 <div className="section-title-inner">
                   <span className="section-title-inner-text">Projects</span>
+                </div>
+                <div className="section-title-inner">
+                  <span className="section-title-inner-text">Projects</span>
+                </div>
                 </div>
               </div>
             </h1>
