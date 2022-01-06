@@ -11,7 +11,7 @@ body {
   font-family: "Manrope", sans-serif;
   color: #1a1a1a;
   width: max-content;
-  background-color: black;
+  // background-color: black;
 }
 
 a {
@@ -337,7 +337,7 @@ section.small {
 }
 
 hr.divider {
-  margin: 0 4.1em;
+  margin: 0 0 0 4.1em;
   height: 93%;
   position: relative;
   top: 3.5%;
@@ -568,6 +568,7 @@ button:hover {
   padding-left: 150px;
   display: flex;
   padding-right: 220px;
+  position: relative;
 }
 
 .section-title {
@@ -576,9 +577,10 @@ button:hover {
   width: 100vh;
   position: absolute;
   top: 50%;
-  left: 9.375rem;
-  -webkit-transform: translate(25%, 486%) rotate(-90deg);
-  transform: translate(25%, 486%) rotate(-90deg);
+  left: 0;
+  transform-origin: 0% 0%;
+  -webkit-transform: translate(0%, 486%) rotate(-90deg);
+  transform: translate(0%, 486%) rotate(-90deg);
 }
 
 .section-title-container {
@@ -840,7 +842,8 @@ button:hover {
   padding-bottom: 5.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 40px;
+  justify-content: center;
   align-items: flex-start;
 }
 
@@ -1129,7 +1132,6 @@ button:hover {
   .back {
     top: 2px;
     background-color: lightblue;
-    background-size: cover;
     width: 98%;
     height: 270px;
   }
@@ -1231,7 +1233,7 @@ button:hover {
   }
 
   .back {
-    width: 101%;
+    width: 98%;
   }
 
   .hole {
@@ -1373,10 +1375,10 @@ button:hover {
   -moz-animation-delay: 1s;
   -o-animation-delay: 1s;
   animation-delay: 1s;
-  -webkit-animation: marqueeSlider 16s linear infinite;
-  -moz-animation: marqueeSlider 16s infinite linear;
-  -o-animation: marqueeSlider 16s infinite linear;
-  animation: marqueeSlider 16s linear infinite;
+  -webkit-animation: marqueeSlider linear infinite;
+  -moz-animation: marqueeSlider infinite linear;
+  -o-animation: marqueeSlider infinite linear;
+  animation: marqueeSlider linear infinite;
   will-change: transform;
 }
 
