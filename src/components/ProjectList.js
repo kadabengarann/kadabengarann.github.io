@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const ProjectList = ({ project }) => {
   const lim = 200;
@@ -12,6 +12,17 @@ const ProjectList = ({ project }) => {
   const nameProj = 
   isLongTitle ? project.name+'\u00A0 |\u00A0\u00A0' : project.name
   
+  const ref = useRef(null);
+  const marqcont = useRef(null);
+  const speed = 90;
+  let duration;
+  useEffect(() => {
+    console.log("width", ref.current.offsetWidth);
+    duration = (ref.current.offsetWidth * 2) / speed;
+    console.log(duration);
+    marqcont.current.style.animationDuration = `${duration}s`;
+ 
+  }, []);
   return (
     <>
       <section className="block_details">
@@ -22,15 +33,15 @@ const ProjectList = ({ project }) => {
             data-scroll
             data-scroll-offset="200"
           >
-            <div class="marquee">
-              <a href={`/project?id=` + project.id} class="marquee-wrap">
-                <div className={"marquee-title " + (isLongTitle ? '' : 'no-marq')}>
-                  <h1 class="_w-title wt1 block_details_title">
+            <div className="marquee">
+              <a href={`/project?id=` + project.id} className="marquee-wrap">
+                <div ref={marqcont} className={"marquee-title " + (isLongTitle ? '' : 'no-marq')}>
+                  <h1 ref={ref} className="_w-title wt1 block_details_title">
                   {nameProj}
                   </h1>
                   {isLongTitle &&
                  Array.from(Array(3), (e, i) => {
-                  return <h1 class="_w-title wt1 block_details_title">
+                  return <h1 key={i}  className="_w-title wt1 block_details_title">
                   {nameProj}</h1>
                 })
                   }
