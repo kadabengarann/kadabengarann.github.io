@@ -27,8 +27,8 @@ const ProjectsPage = () => {
                 data-scroll-speed="2"
                 data-scroll-target="#direction"
               >
-                <div ref={marqcontss} className="section-title-marquee">
-                  <div ref={refss} className="section-title-inner">
+                <div className="section-title-marquee">
+                  <div className="section-title-inner">
                   <span className="section-title-inner-text">Projects</span>
                 </div>
                 <div className="section-title-inner">
