@@ -397,6 +397,10 @@ hr.divider {
 
 .text_zone {
   width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 13px;
 }
 
 .text_zone h1::after {
@@ -439,8 +443,8 @@ hr.divider {
 }
 
 .intro_text {
-  margin-top: 70px;
-  width: 400px;
+  // margin-top: 70px;
+  width: 97%;
   border-left: solid 2px #000;
 }
 
@@ -455,6 +459,8 @@ hr.divider {
 .intro_text> :first-child {
   margin-bottom: 30px;
 }
+
+.c-cta_button-container {}
 
 .o-button,
 button {
@@ -550,7 +556,7 @@ button:hover {
   position: relative;
   z-index: 1;
   color: inherit;
-  margin: 70px 0 20px 0;
+  margin: 0 0 20px 0;
   padding: 2rem 2.1875rem;
   font-size: 1em;
   border: 1px solid #1a1a1a;

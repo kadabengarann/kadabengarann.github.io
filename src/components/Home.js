@@ -40,16 +40,13 @@ const Home = () => {
               </div>
               <div className="intro_text">
                 <p>
-                  I’m a Web Developer based in Indonesia. Coding is my passion
-                  and my professional career focus. Developing applications for
-                  the web has become my drive
+                  I’m a Web Developer based in Indonesia who loves to craft attractive experiences for the web & solving problems creatively with a slight addiction to coffee and music.
                 </p>
                 <p>
-                  I like to think it’s because lightning strikes every time I
-                  create, but I’m pretty sure they’re just trying to save on
-                  syllables.
+                 My flexibility as an independent developer means more dedication to enliven creative and interactive designs, all with natural usability at their core.
                 </p>
               </div>
+              <div className="c-cta_button-container">
               <a className="c-cta_button o-button-norm" href={Pdf} target = "_blank">
                 {" "}
                 Get my Resume{" "}
@@ -62,6 +59,8 @@ const Home = () => {
                 Let's make something special
                 <span className="o-button_arrow u-icon"> → </span>
               </a>
+
+              </div>
             </div>
             <hr className="divider" />
           </div>
