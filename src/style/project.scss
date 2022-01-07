@@ -81,7 +81,7 @@
 .project_images_col.top .project_image_wrapper {
     background-size: 210%;
 
-    position: relative;
+    // position: relative;
     top: 0;
     opacity: 0;
     transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
@@ -358,6 +358,10 @@ a.c-brand_logo {
         top: auto;
         height: 60vw;
         margin-left: -2.5rem;
+        background-size: 166%;
+    }
+
+    .project_images.is-inview .project_images_col.top .project_image_wrapper {
         background-size: 136%;
     }
 
@@ -378,6 +382,12 @@ a.c-brand_logo {
         max-width: 100%;
         // padding: 1.5rem;        
         margin-top: -65px;
+        margin-bottom: 0;
+        padding-top: 0;
+    }
+
+    .project_content_text:nth-child(1) {
+        min-height: 3rem;
     }
 }
 
