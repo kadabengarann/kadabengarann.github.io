@@ -8,6 +8,7 @@ const projects = [
     img: require("./img/todo1.png"),
     img2: require("./img/todo2.png"),
     demo: "https://simple-todo-web.vercel.app",
+    tech: ["html","css","javascript","vercel"],
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ const projects = [
     img: require("./img/jok1.png"),
     img2: require("./img/jok2.png"),
     demo: "https://kadabengarann.github.io/joki-ku",
+    tech: ["html","css","javascript","github"],
 },
   {
     id: 3,
@@ -27,16 +29,20 @@ const projects = [
     thumb: require("./img/akre1.png"),
     img: require("./img/akre1.png"),
     img2: require("./img/akre2.png"),
-    demo: "#",  },
+    demo: "#", 
+    tech: ["html","css","javascript","php","laravel"],
+  },
   {
     id: 4,
     name: "Quizpancasila",
     shortName: "Quizpancasila",
-    desc: "Just a dummy text, no biggie. Sprain of joints and ligaments of unspecified parts of neck  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur architecto cumque accusantium rerum mollitia in. Aliquid nam ad earum quod porro iure facilis ducimus minima cupiditate omnis rem, molestias unde nisi! Dolores vero delectus voluptatem atque. Veniam nisi voluptas at blanditiis suscipit libero quis saepe amet iusto quo, voluptatem dolores obcaecati tempora. Eaque totam at iure sit atque, minima odit voluptatum vel in et eum explicabo ea dicta quod?",
+    desc: "Just a dummy text, no biggie. Sprain of joints and ligaments of unspecified parts of neck  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur architecto cumque accusantium rerum mollitia in. Aliquid nam ad earum quod porro iure facilis ducimus minima cupiditate omnis rem, molestias unde nisi! Dolores vero delectus voluptatem atque.",
     thumb: require("./img/panc1.png"),
     img: require("./img/panc1.png"),
     img2: require("./img/panc2.png"),
     demo: "https://quizpancasila-proto.web.app",
+    tech: ["html","css","jquery","fire-store","fire-auth","pwa"],
+
   },
   {
     id: 5,
@@ -47,6 +53,7 @@ const projects = [
     img: require("./img/book1.png"),
     img2: require("./img/book2.png"),
     demo: "https://kadabengarann.github.io/bookshelf-app/",
+    tech: ["html","css","javascript","github"],
   },
   {
     id: 6,
@@ -56,6 +63,8 @@ const projects = [
     thumb: require("./img/osom1.png"),
     img: require("./img/osom1.png"),
     img2: require("./img/osom2.png"),
-    demo: "https://kadabengarann.github.io/osom",  },
+    demo: "https://kadabengarann.github.io/osom",  
+    tech: ["html","css","javascript","github"],
+  },
 ];
 export default projects;

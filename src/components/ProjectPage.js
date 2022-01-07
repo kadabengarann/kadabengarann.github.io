@@ -6,16 +6,34 @@ import { useLocation } from "react-router-dom";
 import Footer from "./Footer";
 import "../style/project.scss";
 import NoMatchPage from "./NoMatchPage";
+const TechStacks = require("../TechStacks").default;
 
 const projects = require("../projects").default;
-
+function filterById(jsonObject, id) {return jsonObject.filter(function(jsonObject) {return (jsonObject['id'] == id);})[0];}
 const ProjectPage = () => {
   const query = new URLSearchParams(useLocation().search);
   const id = query.get("id");
   const project = projects.find((p) => p.id === Number(id));
   console.log(project);
+  let techs = [];
+  // let selectedObject = filterById(TechStacks, project.tech[0])
+  // console.log(selectedObject);
+  // techs.push(selectedObject)
+  // techs.push(selectedObject)
+  // project.tech.map((techs, index) => (
+  //   techs.push(techs)
+  // ));
+  project.tech.forEach(item =>{
+    let selectedObject = filterById(TechStacks, item)
+    techs.push(selectedObject)
+  }); 
+    console.log('eh');
 
-  
+  techs.forEach(item =>{
+    console.log(item);
+  }); 
+  console.log('eh');
+  //  selectedObject = filterById(TechStacks, project.tech[0]);
   const refs = useRef(null);
   const marqconts = useRef(null);
   const speeds = 5 ;
@@ -73,7 +91,7 @@ const ProjectPage = () => {
                 </div>
                 </div>
               </h1>
-              <div className="project_images">
+              <div className="project_images" data-scroll>
                 <div className="project_images_grid">
                   <div className="o-layout_item project_images_col bottom">
                     <div
@@ -109,21 +127,24 @@ const ProjectPage = () => {
                 </div>
               </div>
               <div className="project_content bottom">
-                <div className="project_content_inner">
+                <div className="project_content_inner" data-scroll>
                   <p className="project_content_text">
                     {project.desc}
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Eaque eos officiis alias sed fugit iusto, sunt unde dolorum.
-                    Impedit dolores perferendis sunt, repellendus nostrum
-                    debitis at possimus asperiores. Ullam, facere?
                   </p>
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    className="project_content_link o-button"
-                  >
-                    Visit website
-                  </a>
+                  <div>
+                  <h3 className="project_content_title">Tech stack used in this project</h3>
+                  <p className="project_content_text">
+                    In this project, I employed the following technologies:
+                  </p>
+                  <div className="project_content_tech-stack">
+                    {techs.map((techs, index) => (
+                    <div key={index} className="tech-stack_item">
+                      <img src={techs.image} alt="" />
+                      <span>{techs.name}</span>
+                    </div>
+                    ))}
+                  </div>
+                  </div>
                 </div>
               </div>
               <a className="anchor" id="contact" data-scroll></a>

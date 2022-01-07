@@ -1,5 +1,6 @@
 .projects_section.-detail {
-    display: block;
+    display: flex;
+    padding-right: 0;
 }
 
 .section-title.project {
@@ -70,12 +71,21 @@
 .project_images_col.bottom .project_image_wrapper {
     bottom: 0;
     top: auto;
-    background-size: 110%;
+    background-size: 150%;
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        background-size 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+
 }
 
 .project_images_col.top .project_image_wrapper {
+    background-size: 210%;
+
+    position: relative;
     top: 0;
-    background-size: 180%;
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        background-size 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
 }
 
 .c-brand_logo_wrapper {
@@ -87,14 +97,83 @@
     width: 12.5rem;
     -webkit-transform: translateX(50%);
     transform: translateX(50%);
+    // opacity: 0;
+    // transform: translateY(80px);
+    // transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
     color: #fff;
     z-index: 10;
+    transition-delay: 0.3s;
+}
+
+.c-brand_logo_wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 50%;
+    transform: scale(0);
+    transform-origin: center;
+    background-color: #fff;
+    border: 1px solid #fff;
+}
+
+.c-brand_logo_wrapper:focus,
+.c-brand_logo_wrapper:hover {
+    background-color: #fff;
+}
+
+.c-brand_logo_wrapper:focus::after,
+.c-brand_logo_wrapper:hover::after {
+    transform: scale(1);
+    transform-origin: center;
+
+    transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+}
+
+.c-brand_logo_wrapper:focus::before,
+.c-brand_logo_wrapper:hover::before {
+    transform: scale(0);
+    z-index: -1;
+    opacity: 0;
+
+    transform-origin: center;
+    transition: none;
 }
 
 .c-brand_logo_wrapper:before {
     content: "";
+    opacity: 1;
     display: block;
     padding-bottom: 100%;
+    background-color: #1e1e1e;
+    border-radius: 50%;
+    position: unset;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -2;
+    transform: scale(1);
+    transform-origin: center;
+
+    transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+}
+
+.c-brand_logo_wrapper:focus,
+.c-brand_logo_wrapper:hover {
+    border: 1px solid #fff;
+    color: black;
+}
+
+.c-brand_logo_wrapper:focus a.c-brand_logo,
+.c-brand_logo_wrapper:hover a.c-brand_logo {
+    color: black;
 }
 
 .c-brand_logo {
@@ -111,27 +190,59 @@
     justify-content: center;
 }
 
-a.c-brand_logo,
-a.c-brand_logo:focus,
-a.c-brand_logo:hover {
+a.c-brand_logo {
     color: #fff;
+
 }
 
 .project_content {
     display: inline-block;
-    width: 28.75rem;
+    width: 39.75rem;
     white-space: normal;
     margin-right: 7.5rem;
-    padding: 2.5rem 3.75rem;
+    padding: 15.5rem 3.75rem 2.5rem 8rem;
+    ;
     vertical-align: bottom;
     margin-bottom: 7.5rem;
+}
+
+.project_content_title {
+    color: #1e1e1e;
+    font-weight: 400;
 }
 
 .project_content_text {
     color: #aaa;
     font-size: .875rem;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: .3em;
+    margin-bottom: 1.2em;
+}
+
+.project_content_text:nth-child(1) {
+    min-height: 10rem;
+}
+
+.project_content_tech-stack {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    color: #aaa;
+    font-size: .875rem;
+    gap: 1rem;
+    width: 90%;
+}
+
+.tech-stack_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-end;
+}
+
+.tech-stack_item img {
+    max-height: 3rem;
+    max-width: 3rem;
+    filter: contrast(1000%) invert(68%);
 }
 
 .project_content_link {
@@ -148,13 +259,52 @@ a.c-brand_logo:hover {
     color: #fff;
     background-color: #1e1e1e;
     border-radius: 20px;
-
+    margin-top: 1.5rem;
 }
 
 .project_content_link.o-button:focus,
 .project_content_link.o-button:hover {
     border: 1px solid #fff;
     color: black;
+}
+
+.project_content_inner>* {
+    position: relative;
+    opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s;
+}
+
+.project_content_inner.is-inview>* {
+    opacity: 1;
+    transform: none;
+}
+
+.project_content_inner.is-inview> :first-child {
+    transition-delay: 0.11s;
+}
+
+.project_content_inner.is-inview> :nth-child(2) {
+    transition-delay: 0.17s;
+}
+
+.project_content_inner.is-inview> :nth-child(3) {
+    transition-delay: 0.23s;
+}
+
+.project_images.is-inview .project_images_col.bottom .project_image_wrapper {
+    transition-delay: 0.23s;
+    background-size: 110%;
+    opacity: 1;
+}
+
+.project_images.is-inview .project_images_col.top .project_image_wrapper {
+    transition-delay: 0.17s;
+
+    background-size: 180%;
+    transform: translateY(0);
+
+    opacity: 1;
 }
 
 @media screen and (max-width: 1024px) {
