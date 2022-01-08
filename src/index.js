@@ -21,6 +21,9 @@ async function loaded() {
 
   await new Promise(resolve => setTimeout(resolve, 1000));
   loader.classList.add("hidden");
+
+  await new Promise(resolve => setTimeout(resolve, 500));
+  document.body.style.overflow = 'visible';
   scroll = new LocomotiveScroll({
     el: document.querySelector("[data-scroll-container]"),
     smooth: true,
@@ -34,7 +37,16 @@ async function loaded() {
       smooth: false,
     },
   });
+  
 }
+const linkMove = document.querySelectorAll(".a-move");
+const loaderTrans = document.querySelector(".loader-trans");
+
+function showLoader() {
+    loaderTrans.classList.add("visible");
+}
+
+linkMove.forEach(n => n.addEventListener("click", showLoader));
 
 
 const mainContainer = document.querySelector("#root");

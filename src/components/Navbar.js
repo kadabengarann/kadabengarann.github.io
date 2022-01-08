@@ -4,9 +4,9 @@ const Navbar = () => {
   return (
     <nav className="navbar">
             <ul className="navbar_pages hide">
-                <li className="navbar_page"><a className="navbar_pages_link" href="/">Home</a></li>
-                <li className="navbar_page"><a className="navbar_pages_link" href="/projects">Projects</a></li>
-                <li className="navbar_page"><a className="navbar_pages_link" href="#">Info</a></li>
+                <li className="navbar_page"><a className="navbar_pages_link a-move" href="/">Home</a></li>
+                <li className="navbar_page"><a className="navbar_pages_link a-move" href="/projects">Projects</a></li>
+                <li className="navbar_page"><a className="navbar_pages_link a-move" href="#">Info</a></li>
             </ul>
             <ul className="navbar_links hide">
                 <li>

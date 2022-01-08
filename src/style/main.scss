@@ -12,6 +12,7 @@ body {
   color: #1a1a1a;
   width: max-content;
   // background-color: black;
+  overflow: hidden;
 }
 
 a {
@@ -360,6 +361,15 @@ hr.divider {
   height: inherit;
   object-fit: cover;
   object-position: center;
+
+  opacity: 0;
+  transform: scale(1.3);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.home_keyvisual.is-inview img {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .home_title {
@@ -376,6 +386,17 @@ hr.divider {
   letter-spacing: 0.35em;
   padding-right: calc(20px - 0.35em);
   text-align: right;
+
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s;
+
+}
+
+.home_enterance.is-inview .home_title {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.23s;
 }
 
 .home_title>span {
@@ -581,13 +602,19 @@ button:hover {
   font-weight: 200;
   font-size: 7.5em;
   width: 100vh;
-
+  opacity: 0;
   position: absolute;
   top: 50%;
   left: 0;
   transform-origin: 0% 0%;
   -webkit-transform: translate(0%, 486%) rotate(-90deg);
   transform: translate(0%, 486%) rotate(-90deg);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+}
+
+.section-title.is-inview {
+  opacity: 1;
 }
 
 .section-title-marquee {
@@ -627,13 +654,20 @@ button:hover {
 .block_details_inner {
   width: inherit;
   height: 100%;
-  border-right: 1px solid #ccc;
+  border-right: 1px solid #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   padding-top: 25px;
   padding-bottom: 25px;
+  transition: border-right 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+
+}
+
+.content_section.is-inview .block_details_inner {
+  border-right: 1px solid #ccc;
+
 }
 
 .block_details_text {
@@ -837,6 +871,11 @@ button:hover {
   top: 39vh;
 }
 
+.c-brand_logo_wrapper.-middle.is-inview {
+  transition-delay: 0.23s;
+  opacity: 1;
+}
+
 .footer {
   position: absolute;
   top: 0;
@@ -918,16 +957,36 @@ button:hover {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #fff;
+  background-color: #1e1e1e;
   z-index: 999;
   opacity: 100%;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .loader.hidden {
-  opacity: 0;
+  opacity: 1;
   visibility: hidden;
+  transform: translateY(-100%);
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.loader-trans {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #1e1e1e;
+  z-index: 999;
+  opacity: 100%;
+  transform: translateY(100%);
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+}
+
+.loader-trans.visible {
+  transform: translateY(0);
+
 }
 
 // ----------- Responsive --------------------

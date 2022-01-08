@@ -100,8 +100,8 @@ const Home = () => {
                 <ProjectList project={project}/>
               </div>
             ))}
-            <figure className="c-brand_logo_wrapper -middle">
-              <a href="/projects" className="c-brand_logo" data-pjax-state="">
+            <figure className="c-brand_logo_wrapper -middle" data-scroll>
+              <a href="/projects" className="c-brand_logo a-move" data-pjax-state="">
                 See All
               </a>
             </figure>

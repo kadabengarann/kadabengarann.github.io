@@ -162,7 +162,7 @@ const ProjectPage = () => {
                 <div className="other-works-container">
                 <a
                   href={`/project?id=` + prev.id}
-                  className="cta"
+                  className="cta a-move"
                 >
                   <div className="previous">
                     <img
@@ -176,8 +176,8 @@ const ProjectPage = () => {
                     </div>
                   </div>
                 </a>
-                <a href={`/projects`} className="all-works cta o-link">Back to all projects</a>
-<a href={`/project?id=` + next.id} className="cta">
+                <a href={`/projects`} className="all-works cta o-link a-move">Back to all projects</a>
+<a href={`/project?id=` + next.id} className="cta a-move">
             <div className="next">
               <div className="next-content">
                 <span>Next Project:</span>

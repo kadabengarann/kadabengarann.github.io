@@ -97,9 +97,9 @@
     width: 12.5rem;
     -webkit-transform: translateX(50%);
     transform: translateX(50%);
-    // opacity: 0;
+    opacity: 0;
     // transform: translateY(80px);
-    // transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
     color: #fff;
     z-index: 10;
@@ -303,6 +303,11 @@ a.c-brand_logo {
     background-size: 180%;
     transform: translateY(0);
 
+    opacity: 1;
+}
+
+.project_images.is-inview .c-brand_logo_wrapper {
+    transition-delay: 0.29s;
     opacity: 1;
 }
 

@@ -44,7 +44,7 @@ const ProjectsPage = () => {
               </div>
             </h1>
             {projects.map((project, index) => (
-              <div key={index}>
+              <div className="itemProj" key={index}>
                 <ProjectList project={project}/>
               </div>
             ))}

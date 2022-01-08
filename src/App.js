@@ -15,7 +15,10 @@ function App() {
       <header>
         <Navbar />
       </header>
-      <div className="loader"></div>
+          <div className="loader"></div>
+    <div className="loader-trans"></div>
+
+
       <main data-scroll-container>
         <Switch>
           <Route exact path="/">

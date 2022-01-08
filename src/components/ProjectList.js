@@ -34,7 +34,7 @@ const ProjectList = ({ project }) => {
             data-scroll-offset="200"
           >
             <div className="marquee">
-              <a href={`/project?id=` + project.id} className="marquee-wrap">
+              <a href={`/project?id=` + project.id} className="marquee-wrap a-move">
                 <div ref={marqcont} className={"marquee-title " + (isLongTitle ? '' : 'no-marq')}>
                   <h1 ref={ref} className="_w-title wt1 block_details_title">
                   {nameProj}
@@ -52,7 +52,7 @@ const ProjectList = ({ project }) => {
             <p>{viewText}</p>
 
             <div className="block_details_links" data-scroll>
-              <a href={`/project?id=` + project.id} className="o-link">
+              <a href={`/project?id=` + project.id} className="o-link a-move">
                 View details
               </a>
             </div>
@@ -64,7 +64,7 @@ const ProjectList = ({ project }) => {
           >
             <div className="base">
               <div className="hole">
-                <a href={`/project?id=` + project.id} className="o-link">
+                <a href={`/project?id=` + project.id} className="o-link a-move">
                   View details
                 </a>
               </div>

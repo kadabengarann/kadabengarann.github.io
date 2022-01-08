@@ -8,6 +8,38 @@
     transform-origin: 0% 50% 0;
 }
 
+.itemProj:nth-child(3) .block_details_text.is-inview> :first-child {
+    transition-delay: 0.31s;
+}
+
+.itemProj:nth-child(3) .block_details_text.is-inview> :nth-child(2) {
+    transition-delay: 0.37s;
+}
+
+.itemProj:nth-child(3) .block_details_links.is-inview> :first-child {
+    transition-delay: 0.49s;
+}
+
+.itemProj:nth-child(3) .block_details_photo.is-inview .back {
+    transition-delay: 0.31s;
+}
+
+.itemProj:nth-child(4) .block_details_text.is-inview> :first-child {
+    transition-delay: 0.51s;
+}
+
+.itemProj:nth-child(4) .block_details_text.is-inview> :nth-child(2) {
+    transition-delay: 0.57s;
+}
+
+.itemProj:nth-child(4) .block_details_links.is-inview> :first-child {
+    transition-delay: 0.69s;
+}
+
+.itemProj:nth-child(4) .block_details_photo.is-inview .back {
+    transition-delay: 0.51s;
+}
+
 @media screen and (max-width: 1024px) {
     .projectsList {
         .section-title.--projects {
