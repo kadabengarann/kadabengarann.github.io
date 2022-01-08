@@ -125,6 +125,7 @@ const ProjectPage = () => {
                       }}
                     ></div>
                   </div>
+                  <div className="c-brand_logo_wrapper_wrapper">
                   <figure className="c-brand_logo_wrapper -top">
                     <a
                       href={project.demo}
@@ -135,6 +136,8 @@ const ProjectPage = () => {
                       {project.shortName}
                     </a>
                   </figure>
+
+                  </div>
                 </div>
               </div>
               <div className="project_content bottom">

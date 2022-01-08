@@ -88,6 +88,12 @@
         background-size 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
 }
 
+.c-brand_logo_wrapper_wrapper {
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+}
+
 .c-brand_logo_wrapper {
     position: absolute;
     right: 0;
@@ -97,10 +103,6 @@
     width: 12.5rem;
     -webkit-transform: translateX(50%);
     transform: translateX(50%);
-    opacity: 0;
-    // transform: translateY(80px);
-    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-
     color: #fff;
     z-index: 10;
     transition-delay: 0.3s;
@@ -306,7 +308,7 @@ a.c-brand_logo {
     opacity: 1;
 }
 
-.project_images.is-inview .c-brand_logo_wrapper {
+.project_images.is-inview .c-brand_logo_wrapper_wrapper {
     transition-delay: 0.29s;
     opacity: 1;
 }
@@ -509,6 +511,10 @@ a.c-brand_logo {
 
     .project_content_text:nth-child(1) {
         min-height: 3rem;
+    }
+
+    .project_content_tech-stack {
+        width: 100%;
     }
 
     .project_content-footer {

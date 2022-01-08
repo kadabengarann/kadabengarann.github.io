@@ -52,7 +52,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #1e1e1e;
   width: 100vw;
   height: 100%;
 }
@@ -871,7 +871,11 @@ button:hover {
   top: 39vh;
 }
 
-.c-brand_logo_wrapper.-middle.is-inview {
+.c-brand_logo_wrapper_wrapper.-middle {
+  z-index: 3;
+}
+
+.c-brand_logo_wrapper_wrapper.-middle.is-inview {
   transition-delay: 0.23s;
   opacity: 1;
 }
@@ -1065,6 +1069,7 @@ button:hover {
     height: 100vh;
     // top: -80px;
     position: relative;
+    background-color: #fff;
   }
 
   .home_keyvisual img {
@@ -1186,11 +1191,17 @@ button:hover {
   .block_details_inner {
     align-items: stretch;
     border-right: none;
-    border-bottom: 1px solid #9f9f9f;
+    border-bottom: none;
     flex-direction: row;
     // overflow: hidden;
     padding-bottom: 40px;
     padding-top: 0;
+  }
+
+  .content_section.is-inview .block_details_inner {
+    border-right: none;
+    border-bottom: 1px solid #9f9f9f;
+
   }
 
   .block_details_text {

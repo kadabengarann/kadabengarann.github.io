@@ -99,12 +99,14 @@ const Home = () => {
               <div key={index}>
                 <ProjectList project={project}/>
               </div>
-            ))}
-            <figure className="c-brand_logo_wrapper -middle" data-scroll>
+            ))}                  <div className="c-brand_logo_wrapper_wrapper -middle"  data-scroll>
+            <figure className="c-brand_logo_wrapper -middle">
               <a href="/projects" className="c-brand_logo a-move" data-pjax-state="">
                 See All
               </a>
             </figure>
+
+</div>
             <a className="anchor" id="contact" data-scroll></a>
           </div>
           <Footer />
