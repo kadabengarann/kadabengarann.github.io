@@ -26,7 +26,9 @@ const ProjectList = ({ project }) => {
   return (
     <>
       <section className="block_details">
-        <div className="block_details_inner">
+        <div className="block_details_inner"  data-scroll-repeat="false"
+            data-scroll
+            data-scroll-offset="200">
           <div
             className="block_details_text"
             data-scroll-repeat="false"

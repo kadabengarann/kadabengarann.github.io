@@ -688,16 +688,16 @@ button:hover {
     -webkit-transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.block_details_text.is-inview>* {
+.block_details_inner.is-inview .block_details_text>* {
   opacity: 1;
   transform: none;
 }
 
-.block_details_text.is-inview> :first-child {
+.block_details_text> :first-child {
   transition-delay: 0.11s;
 }
 
-.block_details_text.is-inview> :nth-child(2) {
+.block_details_text> :nth-child(2) {
   transition-delay: 0.17s;
 }
 
@@ -736,13 +736,13 @@ button:hover {
     -webkit-transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.block_details_links.is-inview>* {
+.block_details_inner.is-inview .block_details_links>* {
   opacity: 1;
   transform: none;
   top: 0;
 }
 
-.block_details_links.is-inview> :first-child {
+.block_details_links> :first-child {
   transition-delay: 0.29s;
 }
 
@@ -801,7 +801,7 @@ button:hover {
   // background-position-y: 64px;
 }
 
-.block_details_photo.is-inview .back {
+.block_details_inner.is-inview .block_details_photo .back {
   transition-delay: 0.11s;
   // background-image: url('https://homesociete.ca/uploads/2019/06/must-1-1.jpg');
   background-size: 110%;
