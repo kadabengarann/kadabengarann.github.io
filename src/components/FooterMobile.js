@@ -6,8 +6,8 @@ const FooterMobile = () => {
             <div className="wrapper">
               <div className="footer_top">
                 <p className="footer_talk">Let’s talk about your next project!</p>
-                <a href="mailto:ardhysatrio@outlook.com?subject=Hi" target="_blank" className="footer_mail o-link">
-                  ardhysatrio@outlook.com
+                <a href="mailto:hey@ardhysatrio.me?subject=Hi" target="_blank" className="footer_mail o-link">
+                  hey@ardhysatrio.me
                 </a>
               </div>
               <div className="footer_social">
