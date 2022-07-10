@@ -1,11 +1,28 @@
 import { useState, useEffect, useRef } from "react";
+import parse from 'html-react-parser';
+import DOMPurify from 'dompurify';
 
 const ProjectList = ({ project }) => {
+    const htmlFrom  = (htmlString, isTrim) => {
+      let cleanHtmlString;
+          if (isTrim) {
+            cleanHtmlString = DOMPurify.sanitize(htmlString.slice(0, lim)+ "..." ,
+            { USE_PROFILES: { html: true } });
+  
+          }else{
+            cleanHtmlString = DOMPurify.sanitize(htmlString,
+            { USE_PROFILES: { html: true } });
+
+          }
+          const html = parse(cleanHtmlString);
+          return html;
+  }
+
   const lim = 200;
   const lim2 = 20;
   const isExpandableT = project.desc.length > lim;
   const [viewText] = useState(
-    isExpandableT ? project.desc.slice(0, lim) + "..." : project.desc
+    project.desc && htmlFrom(project.desc, isExpandableT)
   );
   // const nameProj = project.name.replace(/\s/g, "&nbsp;");
   const isLongTitle = project.name.length > lim2;

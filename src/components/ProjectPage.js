@@ -2,6 +2,8 @@ import React from "react";
 import { useState, useEffect, useRef } from "react";
 
 import { useLocation } from "react-router-dom";
+import parse from 'html-react-parser';
+import DOMPurify from 'dompurify';
 
 import Footer from "./Footer";
 import "../style/project.scss";
@@ -49,7 +51,16 @@ const ProjectPage = () => {
   const refs = useRef(null);
   const marqconts = useRef(null);
   const speeds = 5;
+  
+  const descFromJSON = project.desc;
+
   let duration = (project.name.length * 20 + 100) / speeds;
+  const htmlFrom  = (htmlString) => {
+          const cleanHtmlString = DOMPurify.sanitize(htmlString,
+            { USE_PROFILES: { html: true } });
+          const html = parse(cleanHtmlString);
+          return html;
+  }
 
   useEffect(() => {
     console.log("lebar", refs.current.offsetWidth);
@@ -142,7 +153,23 @@ const ProjectPage = () => {
               </div>
               <div className="project_content bottom">
                 <div className="project_content_inner" data-scroll>
-                  <p className="project_content_text">{project.desc}</p>
+                  <p className="project_content_text">
+                     {descFromJSON && htmlFrom(descFromJSON)}
+                     </p>
+                  <div>
+                    <h4 className="project_role_title">
+                      Role
+                    </h4>
+                    <p className="project_role_text">
+                      {project.role}
+                    </p>
+                     <h4 className="project_place_title">
+                      {project.type =="personal" ?("Type"):("At")}
+                    </h4>
+                    <p className="project_place_text">
+                      {project.type =="personal" ?("Personal Project"):(project.place)}
+                    </p>
+                  </div>
                   <div>
                     <h3 className="project_content_title">
                       Tech stack used in this project
