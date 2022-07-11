@@ -19,16 +19,21 @@ function filterById(jsonObject, id) {
 const ProjectPage = () => {
   const query = new URLSearchParams(useLocation().search);
   const id = query.get("id");
-  const project = projects.find((p) => p.id === Number(id));
+  const project = projects.find((p) => p.id == id);
   console.log(project);
 
-
-  const prevId = id == 1 ? projects.length: Number(id)-1;
-  console.log(prevId);
-  const nextId = id == projects.length ? 1: Number(id)+1;
-  console.log(nextId);
-  const prev = projects.find((p) => p.id === Number(prevId));
-  const next = projects.find((p) => p.id === Number(nextId));
+  const currentIndex = projects.findIndex(object => {
+    return object.id == id;
+  });
+  console.log("curret index = "+currentIndex);
+  const prevIndex = currentIndex == 0 ? projects.length-1: Number(currentIndex)-1;
+  const nextIndex = currentIndex == projects.length-1 ? 0: Number(currentIndex)+1;
+  const prev = projects.at(prevIndex)
+  const next = projects.at(nextIndex)
+  // const prevId = id == 1 ? projects.length: Number(id)-1;
+  console.log(prev.id);
+  // const nextId = id == projects.length ? 1: Number(id)+1;
+  console.log(next.id);
   let techs = [];
   // let selectedObject = filterById(TechStacks, project.tech[0])
   // console.log(selectedObject);
