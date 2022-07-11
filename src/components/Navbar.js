@@ -6,7 +6,8 @@ const Navbar = () => {
             <ul className="navbar_pages hide">
                 <li className="navbar_page"><a className="navbar_pages_link a-move" href="/">Home</a></li>
                 <li className="navbar_page"><a className="navbar_pages_link a-move" href="/projects">Projects</a></li>
-                <li className="navbar_page"><a className="navbar_pages_link a-move" href="#">Info</a></li>
+                <li className="navbar_page"><a className="navbar_pages_link a-move" href="https://blog.ardhysatrio.works/" target="_blank">Blog</a></li>
+                <li className="navbar_page"><i className="navbar_pages_link a-move" href="#" disabled style={{ fontStyle: 'normal' }}>Info</i></li>
             </ul>
             <ul className="navbar_links hide">
                 <li>
