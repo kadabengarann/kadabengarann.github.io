@@ -40,7 +40,7 @@ const Home = () => {
               </div>
               <div className="intro_text">
                 <p>
-                  Web and Mobile Developer based in Indonesia who loves to craft attractive experiences for the web & solving problems creatively with a slight addiction to coffee and music.
+                  Web and Mobile Developer based in Indonesia who loves to craft attractive experiences for applications & solving problems creatively with a slight addiction to coffee and music.
                 </p>
                 <p>
                  My flexibility as an independent developer means more dedication to enliven creative and interactive designs, all with natural usability at their core.
