@@ -15,7 +15,7 @@ const Navbar = () => {
                         Social
                     </div>
                     <div className="navbar_link_body">
-                        <a href="https://twitter.com/kadabengarann" target="_blank" rel="noopener"
+                        <a href="https://twitter.com/" target="_blank" rel="noopener"
                             data-v-1082d173="">Twitter</a><span data-v-1082d173="">/</span><a
                             href="https://www.instagram.com/ardhy.satrio/" target="_blank" rel="noopener"
                             data-v-1082d173="">Instagram</a><span data-v-1082d173="">/</span><a
