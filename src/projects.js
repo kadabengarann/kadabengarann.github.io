@@ -1,5 +1,19 @@
 const projects = [
   {
+    id: "narasource",
+    name: "Narasource",
+    shortName: "WasteCreative",
+    role:"Mobile Developer",
+    place:"PT Media Kreasi Abadi",
+    type:"internship",
+    desc: "",
+    thumb: require("./img/narasource1.png"),
+    img: require("./img/narasource1.png"),
+    img2: require("./img/narasource2.png"),
+    demo: "https://play.google.com/store/apps/details?id=id.co.mka.narasource",
+    tech: ["kotlin"],
+  },
+  {
     id: "wastecreative",
     name: "WasteCreative",
     shortName: "WasteCreative",
