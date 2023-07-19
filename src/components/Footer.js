@@ -6,8 +6,8 @@ const Footer = () => {
             <div className="wrapper">
               <div className="footer_top">
                 <p className="footer_talk">Let’s talk about your next project!</p>
-                <a href="mailto:hey@ardhysatrio.works?subject=Hi" target="_blank" className="footer_mail o-link">
-                  hey@ardhysatrio.works
+                <a href="mailto:hey@ardhysatrio.tech?subject=Hi" target="_blank" className="footer_mail o-link">
+                  hey@ardhysatrio.tech
                 </a>
               </div>
               <div className="footer_social">
