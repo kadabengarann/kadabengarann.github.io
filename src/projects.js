@@ -11,7 +11,7 @@ const projects = [
     img: require("./img/narasource1.png"),
     img2: require("./img/narasource2.png"),
     demo: "https://play.google.com/store/apps/details?id=id.co.mka.narasource",
-    tech: ["kotlin"],
+    tech: ["kotlin","zoom-sdk"],
   },
   {
     id: "wastecreative",
