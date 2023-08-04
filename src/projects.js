@@ -6,11 +6,11 @@ const projects = [
     role:"Mobile Developer",
     place:"PT Media Kreasi Abadi",
     type:"internship",
-    desc: "Narasource is an Android application developed to simplify the process of finding reliable interviewees for various topics. It aims to provide a seamless experience in resolving problems, especially in obtaining valid and trustworthy information. The app also features integrated virtual meetings, enabling smooth and efficient communication between users and interviewees.<br><br> Key Features of Narasource include:<br><ol><li>Registering as a Narasumber (Interviewee)</li><li>Searching for Narasumber (Interviewees)</li><li>Access to informative articles</li></ol><br>Narasource significantly assists users in efficiently locating trustworthy interviewees, saving valuable time during the search process. With this application, you can easily find reliable and credible interviewees tailored to your specific needs.<br><br>Narasource is the ultimate solution for your Narasumber search requirements. Experience the convenience and efficiency it offers in finding the right interviewees for your topics.",
+    desc: "Narasource is an Android application developed to simplify the process of finding reliable interviewees for various topics. It aims to provide a seamless experience in resolving problems, especially in obtaining valid and trustworthy information. The app also features integrated virtual meetings, enabling smooth and efficient communication between users and interviewees.<br><br> Key Features of Narasource include:<br><ol><li>Registering as a Narasumber (Interviewee)</li><li>Searching for Narasumber (Interviewees)</li><li>Access to informative articles</li><li>Virtual meeting</li></ol><br>Narasource significantly assists users in efficiently locating trustworthy interviewees, saving valuable time during the search process. With this application, you can easily find reliable and credible interviewees tailored to your specific needs.<br><br>Narasource is the ultimate solution for your Narasumber search requirements. Experience the convenience and efficiency it offers in finding the right interviewees for your topics.",
     thumb: require("./img/narasource1.png"),
     img: require("./img/narasource1.png"),
     img2: require("./img/narasource2.png"),
-    demo: "https://play.google.com/store/apps/details?id=id.co.mka.narasource",
+    demo: "https://github.com/kadabengarann/narasource",
     tech: ["kotlin","zoom-sdk"],
   },
   {
