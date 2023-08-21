@@ -147,6 +147,7 @@ const ProjectPage = () => {
                       href={project.demo}
                       target="_blank"
                       className="c-brand_logo"
+                      title="Click to visit project page"
                       data-pjax-state=""
                     >
                       {project.shortName}
@@ -174,6 +175,18 @@ const ProjectPage = () => {
                     <p className="project_place_text">
                       {project.type =="personal" ?("Personal Project"):(project.place)}
                     </p>
+                    {project.repo && (
+                      <div>
+                        <h4 className="project_role_title">
+                          Repository
+                        </h4>
+                        <a className="project_repo_text"
+                          href={project.repo}
+                          target="_blank">
+                          {project.repo}
+                        </a>
+                      </div>
+                    )}
                   </div>
                   <div>
                     <h3 className="project_content_title">
