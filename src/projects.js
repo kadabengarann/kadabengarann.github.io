@@ -74,7 +74,7 @@ const projects = [
     img: require("./img/urefclas1.png"), 
     img2: require("./img/urefclas2.png"), 
     demo: "https://huggingface.co/spaces/kadabengaran/useful-review-classification",
-    repo: "https://github.com/kadabengarann/useful-review-classification-webapp",
+    repo: "https://github.com/kadabengarann/useful-review-classification",
     tech: []
   },
   {
