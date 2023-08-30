@@ -33,12 +33,12 @@ const projects = [
   },
   {
     id: "quizpancasila",
-    name: "Quizpancasila",
-    shortName: "Quizpancasila",
+    name: "QuizPancasila",
+    shortName: "QuizPancasila",
     role:"Front-End Web Developer",
     type:"personal",
 		category: "Website",
-    desc: "Quizpancasila is a Quiz WebApp to test knowledge about Indonesian Civic Education (PKn) and Pancasila.",
+    desc: "QuizPancasila is an interactive Quiz WebApp designed to evaluate knowledge of Indonesian Civic Education (PKn) and Pancasila. Users can compete for leaderboard positions while deepening their understanding of essential civic principles.<br><br>QuizPancasila evaluates user comprehension of Indonesian Civic Education (PKn) and Pancasila through a quiz format. Participants answer questions presented in the quiz, with the option to use lifelines for assistance. As they compete for top spots on the leaderboard, they deepen their understanding of crucial civic ideals. Accessible via web browsers or as a Progressive Web App, QuizPancasila enriches civic education in an engaging and competitive format",
     thumb: require("./img/panc1.png"),
     img: require("./img/panc1.png"),
     img2: require("./img/panc2.png"),
@@ -64,15 +64,15 @@ const projects = [
   {
     id: "useful-app-review-classification",
     name: "Useful App Review Classification",
-    shortName: "Useful App Review Classification",
+    shortName: "Review Classification",
     role: "Researcher",
 		place:"Undergraduate thesis research @Information Technology - Lambung Mangkurat University",
     type: "thesis",
 		category: "Machine Learning",
     desc: "\”Useful App Review Classification\" is a machine learning project that utilizes the IndoBERT-BiLSTM model, to automate the classification of app reviews as \"Useful\" or \"Not Useful\". The project provides a user-friendly web interface powered by Streamlit and Hugging Face Space, enabling users to classify individual reviews or upload multiple reviews in CSV format for efficient evaluation. This solution aims to simplify the process of assessing app reviews, aiding developers in effectively assessing the quality and functionality of their applications. Experiment results demonstrate that the IndoBERT-BiLSTM model achieves the best performance with an accuracy rate of 95.49%, representing a 1.16% improvement over the fine-tuned IndoBERT model.",
-    thumb: require("./img/panc1.png"), /*ss app*/
-    img: require("./img/panc1.png"),  /*ss app*/
-    img2: require("./img/panc2.png"),  /*ss Model struktur*/
+    thumb: require("./img/urefclas1.png"), 
+    img: require("./img/urefclas1.png"), 
+    img2: require("./img/urefclas2.png"), 
     demo: "https://huggingface.co/spaces/kadabengaran/useful-review-classification",
     repo: "https://github.com/kadabengarann/useful-review-classification-webapp",
     tech: []
