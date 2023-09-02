@@ -1,0 +1,20 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
+  <url>
+    <loc>https://ardhysatrio.tech/</loc>
+    <lastmod>2023-07-19T13:27:47+00:00</lastmod>
+  </url>
+  <!-- Add navigation links -->
+  <url>
+    <loc>https://ardhysatrio.tech/about</loc>
+    <lastmod>2023-07-19T13:27:47+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://ardhysatrio.tech/projects</loc>
+    <lastmod>2023-07-19T13:27:47+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://ardhysatrio.tech/contact</loc>
+    <lastmod>2023-07-19T13:27:47+00:00</lastmod>
+  </url>
+</urlset>
